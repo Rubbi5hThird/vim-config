@@ -4,6 +4,9 @@ set nocompatible                                                                
 set background=light                                                             "Set background to dark
 filetype off                                                                    "required
 call plug#begin('~/.vim/bundle')
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
 
 Plug 'ryanoasis/vim-webdevicons'
 Plug 'bogado/file-line'
