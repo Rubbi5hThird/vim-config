@@ -1,7 +1,7 @@
 "modify based on https://github.com/kristijanhusak/vimfiles
 set nocompatible                                                                "This must be first, because it changes other options as a side effect.
-" set background=dark                                                             "Set background to dark
-set background=light                                                             "Set background to dark
+set background=dark                                                             "Set background to dark
+" set background=light                                                             "Set background to dark
 filetype off                                                                    "required
 call plug#begin('~/.vim/bundle')
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
@@ -14,40 +14,25 @@ Plug 'junegunn/vim-easy-align'
 Plug 'ryanoasis/vim-webdevicons'
 Plug 'tpope/vim-commentary'
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'mileszs/ack.vim'
+" Plug 'mileszs/ack.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
-" Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'duff/vim-bufonly'
 Plug 'tmhedberg/matchit'
 Plug 'gregsexton/MatchTag'
 Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/neosnippet'
 Plug 'honza/vim-snippets'
-Plug 'othree/html5.vim'
-Plug 'xsbeats/vim-blade'
 Plug 'elzr/vim-json'
-Plug 'evidens/vim-twig'
-Plug 'majutsushi/tagbar'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'pangloss/vim-javascript'
-Plug 'StanAngeloff/php.vim'
-Plug 'stephpy/vim-yaml'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'kchmck/vim-coffee-script'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'mhinz/vim-startify'
-Plug 'marijnh/tern_for_vim', {'do': 'npm install'}
 Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'vivien/vim-linux-coding-style'
 
 call plug#end()
 
@@ -137,8 +122,6 @@ augroup vimrc
 augroup END
 
 autocmd vimrc BufWritePre * :call s:StripTrailingWhitespaces()                  "Auto-remove trailing spaces
-autocmd vimrc InsertLeave * NeoSnippetClearMarkers                              "Remove unused markers for snippets
-autocmd vimrc VimEnter * if !argc() | Startify | endif                          "If no file is selected, execute Startify
 autocmd vimrc FileType html,javascript setlocal sw=2 sts=2 ts=2                 "Set 2 indent for html
 autocmd vimrc FileType php,javascript setlocal cc=80                            "Set right margin only for php and js
 
@@ -153,7 +136,7 @@ autocmd vimrc VimEnter,BufNewFile,BufReadPost * call s:LoadLocalVimrc()         
 
 " ================ Completion =======================
 
-set wildmode=list:full
+set wildmode=list:longest
 set wildmenu                                                                    "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~                                                     "stuff to ignore when tab completing
 set wildignore+=*vim/backups*
@@ -212,7 +195,7 @@ endfunction
 
 " Comment map
 nmap <Leader>c gcc
-
+map q <c-v>
 
 " Line comment command
 xmap <Leader>c gc
@@ -235,30 +218,11 @@ nnoremap <Leader>v <C-w>v
 nnoremap j gj
 nnoremap k gk
 
-" Expand snippets on tab if snippets exists, otherwise do autocompletion
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\ : pumvisible() ? "\<C-n>" :
-\ <SID>check_back_space() ? "\<TAB>" :
-\ neocomplete#start_manual_complete()
-" If popup window is visible do autocompletion from back
-imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" Fix for jumping over placeholders for neosnippet
-smap <expr><TAB> neosnippet#jumpable() ?
-\ "\<Plug>(neosnippet_jump)"
-\: "\<TAB>"
-
 " Map for Escape key
 inoremap jj <Esc>
 
 " Yank to the end of the line
 noremap Y y$
-
-" Copy to system clipboard
-vnoremap <C-c> "+y
-" Paste from system clipboard with Ctrl + v
-inoremap <C-v> <Esc>"+p
-nnoremap <Leader>p "0p
 
 " Move to the end of yanked text after yank and paste
 nnoremap p p`]
@@ -289,18 +253,25 @@ nnoremap <Leader>dc :cd %:p:h<CR>:pwd<CR>
 " Filesearch plugin map for searching in whole folder
 
 " Toggle buffer list
-nnoremap <Leader>b :CtrlPBuffer<CR>
-nnoremap <Leader>t :CtrlPBufTag<CR>
-nnoremap <Leader>f :CtrlP<CR>
-nnoremap <Leader>T :TagbarToggle<CR>
-nnoremap <Leader>m :CtrlPMRU<CR>
+" nnoremap <Leader>b :CtrlPBuffer<CR>
+" nnoremap <Leader>t :CtrlPBufTag<CR>
+" nnoremap <Leader>f :CtrlP<CR>
+" nnoremap <Leader>T :TagbarToggle<CR>
+" nnoremap <Leader>m :CtrlPMRU<CR>
+nnoremap <silent> <Leader>o :Files<CR>
+nnoremap <silent> <Leader>s :Lines<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>h :History<CR>
+nnoremap <silent> <Leader>: :History:<CR>
+nnoremap <silent> <Leader>/ :History/<CR>
 
 " add doc header
-nnoremap <Leader>d :Dox<CR>
-nnoremap <Leader>h :DoxAuthor<CR>
+" nnoremap <Leader>d :Dox<CR>
+" nnoremap <Leader>h :DoxAuthor<CR>
 
 "toggle linenumber
 nnoremap <Leader>l :set nu!<CR>
+
 " Maps for indentation in normal mode
 nnoremap <tab> >>
 nnoremap <s-tab> <<
@@ -320,8 +291,11 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Center highlighted search
-nnoremap n nzz
-nnoremap N Nzz
+" nnoremap n nzz
+" nnoremap N Nzz
+
+nmap n nzz
+nmap N Nzz
 
 "Paste toggle - when pasting something in, don't indent.
 set pastetoggle=<F3>
@@ -338,71 +312,6 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
     \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
     \ }
-
-let g:airline_powerline_fonts = 0                                               "Enable powerline fonts
-let g:airline_theme = "solarized"                                                  "Set theme to powerline default theme
-let g:airline_section_y = '%{substitute(getcwd(), expand("$HOME"), "~", "g")}'  "Set relative path
-let g:airline#extensions#whitespace#enabled = 0                                 "Disable whitespace extension
-let g:airline#extensions#tabline#enabled = 0                                    "Enable tabline extension
-let g:airline#extensions#tabline#left_sep = ''                                 "Left separator for tabline
-let g:airline_right_sep=''
-let g:airline_left_sep=''
-let g:airline#extensions#tabline#left_alt_sep = '│'                             "Right separator for tabline
-let g:airline#extensions#tabline#show_buffers = 0                               "allow configuration for showing only tabs.
-let g:gitgutter_realtime = 0                                                    "Disable gitgutter in realtime
-let g:gitgutter_eager = 0                                                       "Disable gitgutter to eager load on tab or buffer switch
-" Just show the filename (no path) in the tab
-let g:airline#extensions#tabline#fnamemod = ':t'
-
-" air-line
-let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-
-let g:user_emmet_expandabbr_key = '<c-e>'                                       "Change trigger emmet key
-"let g:user_emmet_next_key = '<c-n>'                                             "Change trigger jump to next for emmet
-
-let g:tagbar_autofocus = 1                                                      "Focus tagbar when opened
-
-let g:NERDTreeChDirMode = 2                                                     "Always change the root directory
-let g:NERDTreeMinimalUI = 1                                                     "Disable help text and bookmark title
-let g:NERDTreeShowHidden = 1                                                    "Show hidden files in NERDTree
-let g:NERDTreeIgnore=['\.git$', '\.sass-cache$', '\.vagrant', '\.idea']
-
-let g:neocomplete#enable_smart_case = 1                                         "Use smartcase.
-let g:neocomplete#data_directory = '~/.vim/.neocomplete'                        "Folder where neocomplete saves cache
-let g:neocomplete#max_list = 15                                                 "Limit neocomplete list to 10 entries
-let g:neocomplete#disable_auto_complete = 1                                     "Disable automatic autocomplete
-let g:neocomplete#enable_at_startup = 1                                         "Enable autocomplete
-
-let g:neosnippet#disable_runtime_snippets = {'_' : 1}                           "Snippets setup
-let g:neosnippet#snippets_directory = [
-            \ '~/.vim/bundle/vim-snippets/snippets',
-            \ '~/.vim/snippets']
-
-let g:ackhighlight = 1                                                          "Highlight current search
-
-let g:syntastic_enable_signs = 1
-let g:syntastic_error_symbol = "x"
-let g:syntastic_style_error_symbol = "x"
-let g:syntastic_warning_symbol = "▵"
-let g:syntastic_style_warning_symbol = "▵"
-let g:syntastic_loc_list_height = 5                                             "Height of the errors window
-let g:syntastic_always_populate_loc_list = 1                                    "Always popuplate syntastic error list
-let g:syntastic_aggregate_errors = 1                                            "Show errors from all checkers
-let g:syntastic_auto_jump = 3                                                   "Jump to first error detected
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']                        "Enable only basic syntax checking for php
-let g:syntastic_javascript_checkers = ['jshint', 'jscs']                        "Enable these linters for js
-let g:syntastic_scss_checkers = []                                              "Disable scss checking
-
-let g:vim_json_syntax_conceal = 0                                               "Disable setting quotes for json syntax
-
-let g:delimitMate_expand_cr = 1                                                 "auto indent on enter
-
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '                                "Set up spacing for sidebar icons
 
 let g:DoxygenToolkit_briefTag_pre=""
 let g:DoxygenToolkit_briefTag_post="- "
@@ -422,3 +331,13 @@ if filereadable(glob("$HOME/.vimrc.local"))
 endif
 
 au FileType gitcommit set tw=72
+
+" plugin inuxsty.vim
+let g:linuxsty_patterns = [ "/usr/src/", "/linux", "/android-kernel"]
+
+" light line
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
+
+let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --theme=Dracula --style=header,grid --line-range :300 {}'"

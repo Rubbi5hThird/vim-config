@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/wild
+~MSle0~/Dr
 
 # Last Substitute Search Pattern:
 ~MSle0&TERT
@@ -21,19 +21,81 @@ $
 
 # Command Line History (newest to oldest):
 :q
-|2,0,1515640074,,"q"
+|2,0,1593265755,,"q"
+:w
+|2,0,1593265754,,"w"
+:wq
+|2,0,1593265499,,"wq"
+:PlugInstall
+|2,0,1593265355,,"PlugInstall"
+:q!
+|2,0,1593265162,,"q!"
+:Rg page
+|2,0,1593262034,,"Rg page"
+:Rg NR_FILE_MAPPED
+|2,0,1593261466,,"Rg NR_FILE_MAPPED"
+:Rg
+|2,0,1593261462,,"Rg"
+:Buffers
+|2,0,1593261228,,"Buffers"
+:Colors
+|2,0,1593260369,,"Colors"
+:c
+|2,0,1593260361,,"c"
+:e ~/.vimrc
+|2,0,1593259945,,"e ~/.vimrc"
+:help :map-silent
+|2,0,1593259919,,"help :map-silent"
+:FzfFiles
+|2,0,1593259809,,"FzfFiles"
+:w\
+|2,0,1593257582,,"w\\"
+:wqa
+|2,0,1593254174,,"wqa"
+:PlugUpdate
+|2,0,1593254113,,"PlugUpdate"
+:PlugUp
+|2,0,1593254107,,"PlugUp"
+:qa!
+|2,0,1593254101,,"qa!"
+:243
+|2,0,1593254015,,"243"
+:reg
+|2,0,1593252710,,"reg"
+:pwd
+|2,0,1593251143,,"pwd"
+:set expandtab
+|2,0,1593250012,,"set expandtab"
+:e
+|2,0,1593243647,,"e"
+:`
+|2,0,1593241787,,"`"
+:Rg 123
+|2,0,1593241737,,"Rg 123"
+:set wil
+|2,0,1593241370,,"set wil"
+:141
+|2,0,1593241364,,"141"
+:PlugClean
+|2,0,1593241230,,"PlugClean"
+:Files
+|2,0,1593241206,,"Files"
+:History
+|2,0,1593241096,,"History"
+:hi
+|2,0,1593241088,,"hi"
+:Lines
+|2,0,1593241026,,"Lines"
+:files
+|2,0,1593240479,,"files"
 :Ack AFE
 |2,0,1515578055,,"Ack AFE"
-:w
-|2,0,1515578047,,"w"
 :Ack xfm
 |2,0,1515578022,,"Ack xfm"
 :,
 |2,0,1515578018,,","
 :Ack 123
 |2,0,1515577997,,"Ack 123"
-:q!
-|2,0,1515409452,,"q!"
 :q!@
 |2,0,1515409450,,"q!@"
 :0
@@ -44,16 +106,12 @@ $
 |2,0,1515185097,,"%"
 :q1
 |2,0,1513825749,,"q1"
-:wq
-|2,0,0,,"wq"
 :)
 |2,0,0,,")"
 :ts
 |2,0,0,,"ts"
 :'<,'>q
 |2,0,0,,"'<,'>q"
-:e ~/.vimrc
-|2,0,0,,"e ~/.vimrc"
 :"+y
 |2,0,0,,"\"+y"
 :"+p
@@ -66,8 +124,6 @@ $
 |2,0,0,,"set mouse=a"
 :a
 |2,0,0,,"a"
-:PlugInstall
-|2,0,0,,"PlugInstall"
 :'<,'>
 |2,0,0,,"'<,'>"
 :.,.+6q
@@ -154,14 +210,130 @@ $
 |2,0,0,,"103"
 
 # Search String History (newest to oldest):
+? \s\+$
+|2,1,1593265754,,"\\s\\+$"
+?/Dr
+|2,1,1593264687,47,"Dr"
+?/ansi
+|2,1,1593262065,47,"ansi"
+?/bat
+|2,1,1593261908,47,"bat"
+? \<solarized\>
+|2,1,1593261825,,"\\<solarized\\>"
+?/Dar
+|2,1,1593261626,47,"Dar"
+?/Map
+|2,1,1593261458,47,"Map"
+? \<NR_FILE_MAPPED\>
+|2,1,1593261326,,"\\<NR_FILE_MAPPED\\>"
+?/mmap
+|2,1,1593261311,47,"mmap"
+?/c-p
+|2,1,1593261108,47,"c-p"
+?/Files
+|2,1,1593259947,47,"Files"
+?/ex
+|2,1,1593256811,47,"ex"
+?/mallopt
+|2,1,1593255176,47,"mallopt"
+?/hep
+|2,1,1593255168,47,"hep"
+?/ION
+|2,1,1593250670,47,"ION"
+?/Ion
+|2,1,1593250668,47,"Ion"
+?/sig
+|2,1,1593254843,47,"sig"
+?/SOME
+|2,1,1593254074,47,"SOME"
+? \<define\>
+|2,1,1593254063,,"\\<define\\>"
+?/nzz
+|2,1,1593254035,47,"nzz"
+? \<nnoremap\>
+|2,1,1593253899,,"\\<nnoremap\\>"
+? \<filetype\>
+|2,1,1593253884,,"\\<filetype\\>"
+? \<Plug\>
+|2,1,1593253870,,"\\<Plug\\>"
+?/c-q
+|2,1,1593253765,47,"c-q"
+?/map
+|2,1,1593253762,47,"map"
+?/c-v
+|2,1,1593253755,47,"c-v"
+?/nmap
+|2,1,1593253728,47,"nmap"
+?/C-q
+|2,1,1593253714,47,"C-q"
+?/c-
+|2,1,1593253555,47,"c-"
+?/blue
+|2,1,1593253224,47,"blue"
+?/green
+|2,1,1593253161,47,"green"
+?/_fi
+|2,1,1593252726,47,"_fi"
+?/STR
+|2,1,1593252257,47,"STR"
+?/fun
+|2,1,1593252010,47,"fun"
+?/fu
+|2,1,1593251981,47,"fu"
+? \<is_dma_buf_file\>
+|2,1,1593250867,,"\\<is_dma_buf_file\\>"
+?/is_dma
+|2,1,1593250866,47,"is_dma"
+?/ion_heap
+|2,1,1593250608,47,"ion_heap"
+?/ion_hea
+|2,1,1593250605,47,"ion_hea"
+? \<ion_heap_pool\>
+|2,1,1593250599,,"\\<ion_heap_pool\\>"
+?/ION_heap_pool
+|2,1,1593250591,47,"ION_heap_pool"
+? \<ZSH_THEME_GIT_PROMPT_PREFIX\>
+|2,1,1593250078,,"\\<ZSH_THEME_GIT_PROMPT_PREFIX\\>"
+? \<parse_git_branch\>
+|2,1,1593249800,,"\\<parse_git_branch\\>"
+? \<ION_heap_pool\>
+|2,1,1593247785,,"\\<ION_heap_pool\\>"
+?/ignore
+|2,1,1593247667,47,"ignore"
+?/ZSH
+|2,1,1593243660,47,"ZSH"
+?/ZSh
+|2,1,1593243658,47,"ZSh"
+?/PATH
+|2,1,1593243515,47,"PATH"
+?/leader
+|2,1,1593241810,47,"leader"
+?/History
+|2,1,1593241801,47,"History"
+?/Start
+|2,1,1593241775,47,"Start"
+?/ack
+|2,1,1593241720,47,"ack"
+?/Neo
+|2,1,1593241386,47,"Neo"
+?/FI
+|2,1,1593241343,47,"FI"
+?/neo
+|2,1,1593241299,47,"neo"
+?/lightline.vim'
+|2,1,1593241191,47,"lightline.vim'"
+?/.
+|2,1,1593241111,47,"."
+?/pas
+|2,1,1593240893,47,"pas"
+?/tagbar
+|2,1,1593240829,47,"tagbar"
 ?/wild
 |2,1,1515635229,47,"wild"
 ?/ctrlp
 |2,1,1515635207,47,"ctrlp"
 ?/ctrlp_working_path_mode
 |2,1,1515635204,47,"ctrlp_working_path_mode"
-? \s\+$
-|2,1,1515578047,,"\\s\\+$"
 ?/bash
 |2,1,1515570110,47,"bash"
 ?/imx
@@ -694,6 +866,10 @@ $
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
+@,h
+|2,3,1593241806,,",h"
+@y
+|2,3,1593241235,,"y"
 @0.4
 |2,3,0,,"0.4"
 @0.0.1
@@ -702,386 +878,741 @@ $
 |2,3,0,,"ru"
 @1.0
 |2,3,0,,"1.0"
-@y
-|2,3,0,,"y"
 @:y
 |2,3,0,,":y"
 
 # Debug Line History (newest to oldest):
 
 # Registers:
-""0	LINE	0
-	    <path name="audio-ull-playback afe-proxy">
-	        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia8" value="1" />
-	    </path>
-|3,1,0,1,3,0,1515578042,"    <path name=\"audio-ull-playback afe-proxy\">","        <ctl name=\"AFE_PCM_RX Audio Mixer MultiMedia8\" value=\"1\" />","    </path>"
+"0	LINE	0
+	echo 'copy the vim config'
+|3,0,0,1,1,0,1593265749,"echo 'copy the vim config'"
 "1	LINE	0
-	        <ctl name="SLIM RX2 MUX" value="AIF4_PB" />
-	        <ctl name="SLIM RX3 MUX" value="AIF4_PB" />
-	        <ctl name="SLIM_6_RX Channels" value="Two" />
-	        <ctl name="RX INT1_2 MUX" value="RX2" />
-	        <ctl name="RX INT2_2 MUX" value="RX3" />
-	        <ctl name="RX INT1 DEM MUX" value="CLSH_DSM_OUT" />
-	        <ctl name="RX INT2 DEM MUX" value="CLSH_DSM_OUT" />
-|3,0,1,1,7,0,1515187740,"        <ctl name=\"SLIM RX2 MUX\" value=\"AIF4_PB\" />","        <ctl name=\"SLIM RX3 MUX\" value=\"AIF4_PB\" />","        <ctl name=\"SLIM_6_RX Channels\" value=\"Two\" />","        <ctl name=\"RX INT1_2 MUX\" value=\"RX2\" />","        <ctl name=\"RX INT2_2 MUX\" value=\"RX3\" />","        <ctl name=\"RX INT1 DEM MUX\" value=\"CLSH_DSM_OUT\" />","        <ctl name=\"RX INT2 DEM MUX\" value=\"CLSH_DSM_OUT\" />"
+	rm ./.vim
+|3,0,1,1,1,0,1593265394,"rm ./.vim"
 "2	LINE	0
-	        <path name="headphones"/>
-|3,0,2,1,1,0,1515187353,"        <path name=\"headphones\"/>"
+	let $FZF_DEFAULT_OPTS="--solarized --preview-window 'right:60%' --layout reverse --margin=1,4"
+|3,0,2,1,1,0,1593261772,"let $FZF_DEFAULT_OPTS=\"--solarized --preview-window 'right:60%' --layout reverse --margin=1,4\""
 "3	LINE	0
-	        <ctl name="SLIM RX0 MUX" value="AIF_MIX1_PB" />
-	        <ctl name="SLIM RX1 MUX" value="AIF_MIX1_PB" />
-	        <ctl name="SLIM_0_RX Channels" value="Two" />
-	        <ctl name="RX INT5_2 MUX" value="RX1" />
-	        <ctl name="RX INT3_2 MUX" value="RX0" />
-	        <ctl name="RX INT4_2 MUX" value="RX1" />
-	        <ctl name="RX INT6_2 MUX" value="RX0" />
-	        <ctl name="SLIMBUS_0_RX Audio Mixer Multimedia1" value="1" />
-	        <ctl name="COMP3 Switch" value="1" />
-	        <ctl name="COMP4 Switch" value="1" />
-|3,0,3,1,10,0,1515187033,"        <ctl name=\"SLIM RX0 MUX\" value=\"AIF_MIX1_PB\" />","        <ctl name=\"SLIM RX1 MUX\" value=\"AIF_MIX1_PB\" />","        <ctl name=\"SLIM_0_RX Channels\" value=\"Two\" />","        <ctl name=\"RX INT5_2 MUX\" value=\"RX1\" />","        <ctl name=\"RX INT3_2 MUX\" value=\"RX0\" />","        <ctl name=\"RX INT4_2 MUX\" value=\"RX1\" />","        <ctl name=\"RX INT6_2 MUX\" value=\"RX0\" />",>75
-|<"        <ctl name=\"SLIMBUS_0_RX Audio Mixer Multimedia1\" value=\"1\" />","        <ctl name=\"COMP3 Switch\" value=\"1\" />","        <ctl name=\"COMP4 Switch\" value=\"1\" />"
+	
+|3,0,3,1,1,0,1593261581,""
 "4	LINE	0
-	        <ctl name="SLIM RX0 MUX" value="AIF_MIX1_PB" />
-	        <ctl name="SLIM RX1 MUX" value="AIF_MIX1_PB" />
-	        <ctl name="SLIM_0_RX Channels" value="Two" />
-	        <ctl name="RX INT5_2 MUX" value="RX1" />
-	        <ctl name="RX INT3_2 MUX" value="RX0" />
-	        <ctl name="RX INT4_2 MUX" value="RX1" />
-	        <ctl name="RX INT6_2 MUX" value="RX0" />
-	        <ctl name="SLIMBUS_0_RX Audio Mixer Multimedia1" value="1" />
-	        <ctl name="COMP3 Switch" value="1" />
-	        <ctl name="COMP4 Switch" value="1" />
-|3,0,4,1,10,0,1515187027,"        <ctl name=\"SLIM RX0 MUX\" value=\"AIF_MIX1_PB\" />","        <ctl name=\"SLIM RX1 MUX\" value=\"AIF_MIX1_PB\" />","        <ctl name=\"SLIM_0_RX Channels\" value=\"Two\" />","        <ctl name=\"RX INT5_2 MUX\" value=\"RX1\" />","        <ctl name=\"RX INT3_2 MUX\" value=\"RX0\" />","        <ctl name=\"RX INT4_2 MUX\" value=\"RX1\" />","        <ctl name=\"RX INT6_2 MUX\" value=\"RX0\" />",>75
-|<"        <ctl name=\"SLIMBUS_0_RX Audio Mixer Multimedia1\" value=\"1\" />","        <ctl name=\"COMP3 Switch\" value=\"1\" />","        <ctl name=\"COMP4 Switch\" value=\"1\" />"
+	let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
+|3,0,4,1,1,0,1593261485,"let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }"
 "5	LINE	0
-	        <ctl name="SLIM RX0 MUX" value="AIF_MIX1_PB" />
-	        <ctl name="SLIM RX1 MUX" value="AIF_MIX1_PB" />
-	        <ctl name="SLIM_0_RX Channels" value="Two" />
-	        <ctl name="RX INT5_2 MUX" value="RX1" />
-	        <ctl name="RX INT3_2 MUX" value="RX0" />
-	        <ctl name="RX INT4_2 MUX" value="RX1" />
-	        <ctl name="RX INT6_2 MUX" value="RX0" />
-	        <ctl name="SLIMBUS_0_RX Audio Mixer Multimedia1" value="1" />
-	        <ctl name="COMP3 Switch" value="1" />
-	        <ctl name="COMP4 Switch" value="1" />
-|3,0,5,1,10,0,1515186917,"        <ctl name=\"SLIM RX0 MUX\" value=\"AIF_MIX1_PB\" />","        <ctl name=\"SLIM RX1 MUX\" value=\"AIF_MIX1_PB\" />","        <ctl name=\"SLIM_0_RX Channels\" value=\"Two\" />","        <ctl name=\"RX INT5_2 MUX\" value=\"RX1\" />","        <ctl name=\"RX INT3_2 MUX\" value=\"RX0\" />","        <ctl name=\"RX INT4_2 MUX\" value=\"RX1\" />","        <ctl name=\"RX INT6_2 MUX\" value=\"RX0\" />",>75
-|<"        <ctl name=\"SLIMBUS_0_RX Audio Mixer Multimedia1\" value=\"1\" />","        <ctl name=\"COMP3 Switch\" value=\"1\" />","        <ctl name=\"COMP4 Switch\" value=\"1\" />"
+	--bind='f3:execute(bat {} > 123.txt),f4:execute(bat --style=numbers 1.txt | less),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-w:execute(echo {+})'
+|3,0,5,1,1,0,1593258442,"--bind='f3:execute(bat {} > 123.txt),f4:execute(bat --style=numbers 1.txt | less),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-w:execute(echo {+})'"
 "6	LINE	0
-	        <path nam>
-|3,0,6,1,1,0,1515186893,"        <path nam>"
+	export FZF_DEFAULT_OPTS="
+	--no-mouse --height 50% -1 --reverse --multi --inline-info
+	--preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {}) 2> /dev/null | head -300'
+	--preview-window='right:hidden:wrap'
+	--bind='f3:enter:execute(less {}),f4:execute(bat --style=numbers 1.txt | less),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-w:execute(echo {+})'
+	--color dark,hl:33,hl+:37,fg+:235,bg+:136,fg+:254
+	--color info:254,prompt:37,spinner:108,pointer:235,marker:235
+	"
+|3,0,6,1,8,0,1593258161,"export FZF_DEFAULT_OPTS=\"","--no-mouse --height 50% -1 --reverse --multi --inline-info","--preview='[[ \\$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {}) 2> /dev/null | head -300'","--preview-window='right:hidden:wrap'",>191
+|<"--bind='f3:enter:execute(less {}),f4:execute(bat --style=numbers 1.txt | less),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-w:execute(echo {+})'","--color dark,hl:33,hl+:37,fg+:235,bg+:136,fg+:254","--color info:254,prompt:37,spinner:108,pointer:235,marker:235","\""
 "7	LINE	0
-	    <ctl name="SLIMBUS_0_RX Port Mixer TERT_MI2S_TX" value="0" />
-	    <ctl name="SLIMBUS_DL_HL Switch" value="0" />
-|3,0,7,1,2,0,1515179114,"    <ctl name=\"SLIMBUS_0_RX Port Mixer TERT_MI2S_TX\" value=\"0\" />","    <ctl name=\"SLIMBUS_DL_HL Switch\" value=\"0\" />"
+	#
+	# Respects the following environment variables:
+	#   ZSH     - path to the Oh My Zsh repository folder (default: $HOME/.oh-my-zsh)
+	#   REPO    - name of the GitHub repo to install from (default: ohmyzsh/ohmyzsh)
+	#   REMOTE  - full remote URL of the git repo to install (default: GitHub via HTTPS)
+	#   BRANCH  - branch to check out immediately after install (default: master)
+	#
+	# Other options:
+	#   CHSH       - 'no' means the installer will not change the default shell (default: yes)
+	#   RUNZSH     - 'no' means the installer will not run zsh after the install (default: yes)
+	#   KEEP_ZSHRC - 'yes' means the installer will not replace an existing .zshrc (default: no)
+	#
+	# You can also pass some arguments to the install script to set some these options:
+	#   --skip-chsh: has the same behavior as setting CHSH to 'no'
+	#   --unattended: sets both CHSH and RUNZSH to 'no'
+	#   --keep-zshrc: sets KEEP_ZSHRC to 'yes'
+	# For example:
+	#   sh install.sh --unattended
+	#
+	set -e
+	
+	# Default settings
+	ZSH=${ZSH:-~/.oh-my-zsh}
+	REPO=${REPO:-ohmyzsh/ohmyzsh}
+	REMOTE=${REMOTE:-https://github.com/${REPO}.git}
+	BRANCH=${BRANCH:-master}
+	
+	# Other options
+	CHSH=${CHSH:-yes}
+	RUNZSH=${RUNZSH:-yes}
+	KEEP_ZSHRC=${KEEP_ZSHRC:-no}
+	
+	
+	command_exists() {
+		command -v "$@" >/dev/null 2>&1
+	}
+	
+	error() {
+		echo ${RED}"Error: $@"${RESET} >&2
+	}
+	
+	setup_color() {
+		# Only use colors if connected to a terminal
+		if [ -t 1 ]; then
+			RED=$(printf '\033[31m')
+			GREEN=$(printf '\033[32m')
+			YELLOW=$(printf '\033[33m')
+			BLUE=$(printf '\033[34m')
+			BOLD=$(printf '\033[1m')
+			RESET=$(printf '\033[m')
+|3,0,7,1,50,0,1593257646,"#","# Respects the following environment variables:","#   ZSH     - path to the Oh My Zsh repository folder (default: $HOME/.oh-my-zsh)","#   REPO    - name of the GitHub repo to install from (default: ohmyzsh/ohmyzsh)","#   REMOTE  - full remote URL of the git repo to install (default: GitHub via HTTPS)","#   BRANCH  - branch to check out immediately after install (default: master)","#","# Other options:",>92
+|<"#   CHSH       - 'no' means the installer will not change the default shell (default: yes)","#   RUNZSH     - 'no' means the installer will not run zsh after the install (default: yes)","#   KEEP_ZSHRC - 'yes' means the installer will not replace an existing .zshrc (default: no)","#","# You can also pass some arguments to the install script to set some these options:","#   --skip-chsh: has the same behavior as setting CHSH to 'no'","#   --unattended: sets both CHSH and RUNZSH to 'no'",>44
+|<"#   --keep-zshrc: sets KEEP_ZSHRC to 'yes'","# For example:","#   sh install.sh --unattended","#","set -e","","# Default settings","ZSH=${ZSH:-~/.oh-my-zsh}","REPO=${REPO:-ohmyzsh/ohmyzsh}","REMOTE=${REMOTE:-https://github.com/${REPO}.git}","BRANCH=${BRANCH:-master}","","# Other options","CHSH=${CHSH:-yes}","RUNZSH=${RUNZSH:-yes}","KEEP_ZSHRC=${KEEP_ZSHRC:-no}","","","command_exists() {","	command -v \"$@\" >/dev/null 2>&1","}","","error() {","	echo ${RED}\"Error: $@\"${RESET} >&2",>3
+|<"}","","setup_color() {","	# Only use colors if connected to a terminal","	if [ -t 1 ]; then","		RED=$(printf '\\033[31m')","		GREEN=$(printf '\\033[32m')","		YELLOW=$(printf '\\033[33m')","		BLUE=$(printf '\\033[34m')","		BOLD=$(printf '\\033[1m')","		RESET=$(printf '\\033[m')"
 "8	LINE	0
-	    <ctl name="SLIMBUS_0_RX Port Mixer AUX_PCM_UL_TX" value="0" />
-|3,0,8,1,1,0,1515179112,"    <ctl name=\"SLIMBUS_0_RX Port Mixer AUX_PCM_UL_TX\" value=\"0\" />"
+	#
+|3,0,8,1,1,0,1593257643,"#"
 "9	LINE	0
-	    <ctl name="SLIM RX1 MUX" value="ZERO" />
-	    <ctl name="AIF1_CAP Mixer SLIM TX7" value="0" />
-	    <ctl name="AIF1_CAP Mixer SLIM TX8" value="0"/>
-	    <ctl name="AIF1_CAP Mixer SLIM TX6" value="0" />
-	    <ctl name="AIF1_CAP Mixer SLIM TX5" value="0"/>
-	    <ctl name="AIF1_CAP Mixer SLIM TX4" value="0" />
-	    <ctl name="AIF1_CAP Mixer SLIM TX3" value="0"/>
-	    <ctl name="AIF1_CAP Mixer SLIM TX2" value="0" />
-	    <ctl name="AIF1_CAP Mixer SLIM TX1" value="0"/>
-	    <ctl name="AIF1_CAP Mixer SLIM TX0" value="0"/>
-	    <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia4" value="0" />
-	    <ctl name="SLIMBUS_6_RX Port Mixer AUX_PCM_UL_TX" value="0" />
-|3,0,9,1,12,0,1515179110,"    <ctl name=\"SLIM RX1 MUX\" value=\"ZERO\" />","    <ctl name=\"AIF1_CAP Mixer SLIM TX7\" value=\"0\" />","    <ctl name=\"AIF1_CAP Mixer SLIM TX8\" value=\"0\"/>","    <ctl name=\"AIF1_CAP Mixer SLIM TX6\" value=\"0\" />","    <ctl name=\"AIF1_CAP Mixer SLIM TX5\" value=\"0\"/>","    <ctl name=\"AIF1_CAP Mixer SLIM TX4\" value=\"0\" />","    <ctl name=\"AIF1_CAP Mixer SLIM TX3\" value=\"0\"/>",>58
-|<"    <ctl name=\"AIF1_CAP Mixer SLIM TX2\" value=\"0\" />","    <ctl name=\"AIF1_CAP Mixer SLIM TX1\" value=\"0\"/>","    <ctl name=\"AIF1_CAP Mixer SLIM TX0\" value=\"0\"/>","    <ctl name=\"SLIMBUS_0_RX Audio Mixer MultiMedia4\" value=\"0\" />","    <ctl name=\"SLIMBUS_6_RX Port Mixer AUX_PCM_UL_TX\" value=\"0\" />"
-"-	CHAR	0
-	TERT_MI2S_TX
-|3,0,36,0,1,0,1515185029,"TERT_MI2S_TX"
+	#   ZSH=~/.zsh sh install.sh
+|3,0,9,1,1,0,1593257643,"#   ZSH=~/.zsh sh install.sh"
+""-	CHAR	0
+	copy 
+|3,1,36,0,1,0,1593265752,"copy "
 
 # File marks:
-'0  30  0  /System/Library/LaunchDaemons/com.apple.locate.plist
-|4,48,30,0,1515640074,"/System/Library/LaunchDaemons/com.apple.locate.plist"
-'1  152  4  ~/.vimrc
-|4,49,152,4,1515635503,"~/.vimrc"
-'2  1263  66  ~/Temp/log
-|4,50,1263,66,1515578063,"~/Temp/log"
-'3  745  10  ~/Temp/mixer_paths_tasha.xml
-|4,51,745,10,1515578043,"~/Temp/mixer_paths_tasha.xml"
-'4  745  10  ~/Temp/mixer_paths_tasha.xml
-|4,52,745,10,1515578043,"~/Temp/mixer_paths_tasha.xml"
-'5  645  15  ~/Temp/log
-|4,53,645,15,1515578031,"~/Temp/log"
-'6  645  15  ~/Temp/log
-|4,54,645,15,1515578031,"~/Temp/log"
-'7  1  0  ~/Temp/lo
-|4,55,1,0,1515577990,"~/Temp/lo"
-'8  1  0  ~/Temp/log
-|4,56,1,0,1515577961,"~/Temp/log"
-'9  1  0  ~/Temp/log
-|4,57,1,0,1515577961,"~/Temp/log"
+'0  6  9  ~/tmp/vim-config/update.sh
+|4,48,6,9,1593265755,"~/tmp/vim-config/update.sh"
+'1  7  5  ~/tmp/vim-config/update.sh
+|4,49,7,5,1593265618,"~/tmp/vim-config/update.sh"
+'2  4  5  ~/tmp/vim-config/update.sh
+|4,50,4,5,1593265618,"~/tmp/vim-config/update.sh"
+'3  3  1  ~/tmp/vim-config/setup.sh
+|4,51,3,1,1593265611,"~/tmp/vim-config/setup.sh"
+'4  4  0  ~/tmp/vim-config/update.sh
+|4,52,4,0,1593265608,"~/tmp/vim-config/update.sh"
+'5  4  0  ~/tmp/vim-config/update.sh
+|4,53,4,0,1593265608,"~/tmp/vim-config/update.sh"
+'6  2  0  ~/tmp/vim-config/update.sh
+|4,54,2,0,1593265608,"~/tmp/vim-config/update.sh"
+'7  2  0  ~/tmp/vim-config/update.sh
+|4,55,2,0,1593265608,"~/tmp/vim-config/update.sh"
+'8  1  0  ~/tmp/vim-config/setup.sh
+|4,56,1,0,1593265600,"~/tmp/vim-config/setup.sh"
+'9  1  0  ~/tmp/vim-config/setup.sh
+|4,57,1,0,1593265600,"~/tmp/vim-config/setup.sh"
 
 # Jumplist (newest first):
--'  30  0  /System/Library/LaunchDaemons/com.apple.locate.plist
-|4,39,30,0,1515640074,"/System/Library/LaunchDaemons/com.apple.locate.plist"
--'  1  0  /System/Library/LaunchDaemons/com.apple.locate.plist
-|4,39,1,0,1515640070,"/System/Library/LaunchDaemons/com.apple.locate.plist"
--'  152  4  ~/.vimrc
-|4,39,152,4,1515635503,"~/.vimrc"
--'  152  4  ~/.vimrc
-|4,39,152,4,1515635503,"~/.vimrc"
--'  221  6  ~/.vimrc
-|4,39,221,6,1515635229,"~/.vimrc"
--'  221  6  ~/.vimrc
-|4,39,221,6,1515635229,"~/.vimrc"
--'  14  15  ~/.vimrc
-|4,39,14,15,1515635222,"~/.vimrc"
--'  14  15  ~/.vimrc
-|4,39,14,15,1515635222,"~/.vimrc"
--'  318  102  ~/.vimrc
-|4,39,318,102,1515635221,"~/.vimrc"
--'  318  102  ~/.vimrc
-|4,39,318,102,1515635221,"~/.vimrc"
--'  317  6  ~/.vimrc
-|4,39,317,6,1515635209,"~/.vimrc"
--'  317  6  ~/.vimrc
-|4,39,317,6,1515635209,"~/.vimrc"
--'  316  6  ~/.vimrc
-|4,39,316,6,1515635208,"~/.vimrc"
--'  316  6  ~/.vimrc
-|4,39,316,6,1515635208,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1515635207,"~/.vimrc"
--'  1  0  ~/.vimrc
-|4,39,1,0,1515635207,"~/.vimrc"
--'  1263  66  ~/Temp/log
-|4,39,1263,66,1515578063,"~/Temp/log"
--'  1263  66  ~/Temp/log
-|4,39,1263,66,1515578063,"~/Temp/log"
--'  1263  66  ~/Temp/log
-|4,39,1263,66,1515578063,"~/Temp/log"
--'  1263  66  ~/Temp/log
-|4,39,1263,66,1515578063,"~/Temp/log"
--'  1810  10  ~/Temp/log
-|4,39,1810,10,1515578055,"~/Temp/log"
--'  1810  10  ~/Temp/log
-|4,39,1810,10,1515578055,"~/Temp/log"
--'  1810  10  ~/Temp/log
-|4,39,1810,10,1515578055,"~/Temp/log"
--'  1810  10  ~/Temp/log
-|4,39,1810,10,1515578055,"~/Temp/log"
--'  1808  4  ~/Temp/log
-|4,39,1808,4,1515578046,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578046,"~/Temp/log"
--'  1808  4  ~/Temp/log
-|4,39,1808,4,1515578046,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578046,"~/Temp/log"
--'  1808  4  ~/Temp/log
-|4,39,1808,4,1515578046,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578046,"~/Temp/log"
--'  1808  4  ~/Temp/log
-|4,39,1808,4,1515578046,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578046,"~/Temp/log"
--'  745  10  ~/Temp/mixer_paths_tasha.xml
-|4,39,745,10,1515578043,"~/Temp/mixer_paths_tasha.xml"
--'  745  10  ~/Temp/mixer_paths_tasha.xml
-|4,39,745,10,1515578043,"~/Temp/mixer_paths_tasha.xml"
--'  745  10  ~/Temp/mixer_paths_tasha.xml
-|4,39,745,10,1515578043,"~/Temp/mixer_paths_tasha.xml"
--'  745  10  ~/Temp/mixer_paths_tasha.xml
-|4,39,745,10,1515578043,"~/Temp/mixer_paths_tasha.xml"
--'  745  10  ~/Temp/mixer_paths_tasha.xml
-|4,39,745,10,1515578043,"~/Temp/mixer_paths_tasha.xml"
--'  745  10  ~/Temp/mixer_paths_tasha.xml
-|4,39,745,10,1515578043,"~/Temp/mixer_paths_tasha.xml"
--'  745  10  ~/Temp/mixer_paths_tasha.xml
-|4,39,745,10,1515578043,"~/Temp/mixer_paths_tasha.xml"
--'  745  10  ~/Temp/mixer_paths_tasha.xml
-|4,39,745,10,1515578043,"~/Temp/mixer_paths_tasha.xml"
--'  743  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,743,0,1515578042,"~/Temp/mixer_paths_tasha.xml"
--'  743  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,743,0,1515578042,"~/Temp/mixer_paths_tasha.xml"
--'  743  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,743,0,1515578042,"~/Temp/mixer_paths_tasha.xml"
--'  743  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,743,0,1515578042,"~/Temp/mixer_paths_tasha.xml"
--'  743  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,743,0,1515578042,"~/Temp/mixer_paths_tasha.xml"
--'  743  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,743,0,1515578042,"~/Temp/mixer_paths_tasha.xml"
--'  743  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,743,0,1515578042,"~/Temp/mixer_paths_tasha.xml"
--'  743  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,743,0,1515578042,"~/Temp/mixer_paths_tasha.xml"
--'  1  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,1,0,1515578038,"~/Temp/mixer_paths_tasha.xml"
--'  1  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,1,0,1515578038,"~/Temp/mixer_paths_tasha.xml"
--'  1  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,1,0,1515578038,"~/Temp/mixer_paths_tasha.xml"
--'  1  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,1,0,1515578038,"~/Temp/mixer_paths_tasha.xml"
--'  1  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,1,0,1515578038,"~/Temp/mixer_paths_tasha.xml"
--'  1  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,1,0,1515578038,"~/Temp/mixer_paths_tasha.xml"
--'  1  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,1,0,1515578038,"~/Temp/mixer_paths_tasha.xml"
--'  1  0  ~/Temp/mixer_paths_tasha.xml
-|4,39,1,0,1515578038,"~/Temp/mixer_paths_tasha.xml"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  645  15  ~/Temp/log
-|4,39,645,15,1515578031,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578022,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578022,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578022,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578022,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578022,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578022,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578022,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515578022,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515577997,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515577997,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515577997,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515577997,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515577997,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515577997,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515577997,"~/Temp/log"
--'  1  0  ~/Temp/log
-|4,39,1,0,1515577997,"~/Temp/log"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
--'  1  0  ~/Temp/lo
-|4,39,1,0,1515577990,"~/Temp/lo"
+-'  6  9  ~/tmp/vim-config/update.sh
+|4,39,6,9,1593265755,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265718,"~/tmp/vim-config/update.sh"
+-'  7  5  ~/tmp/vim-config/update.sh
+|4,39,7,5,1593265618,"~/tmp/vim-config/update.sh"
+-'  4  5  ~/tmp/vim-config/update.sh
+|4,39,4,5,1593265618,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265613,"~/tmp/vim-config/update.sh"
+-'  3  1  ~/tmp/vim-config/setup.sh
+|4,39,3,1,1593265611,"~/tmp/vim-config/setup.sh"
+-'  3  1  ~/tmp/vim-config/setup.sh
+|4,39,3,1,1593265611,"~/tmp/vim-config/setup.sh"
+-'  3  1  ~/tmp/vim-config/setup.sh
+|4,39,3,1,1593265611,"~/tmp/vim-config/setup.sh"
+-'  3  1  ~/tmp/vim-config/setup.sh
+|4,39,3,1,1593265611,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265609,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265609,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265609,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265609,"~/tmp/vim-config/setup.sh"
+-'  4  0  ~/tmp/vim-config/update.sh
+|4,39,4,0,1593265608,"~/tmp/vim-config/update.sh"
+-'  2  0  ~/tmp/vim-config/update.sh
+|4,39,2,0,1593265608,"~/tmp/vim-config/update.sh"
+-'  2  0  ~/tmp/vim-config/update.sh
+|4,39,2,0,1593265608,"~/tmp/vim-config/update.sh"
+-'  2  0  ~/tmp/vim-config/update.sh
+|4,39,2,0,1593265608,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265601,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265601,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
+-'  8  0  ~/tmp/vim-config/update.sh
+|4,39,8,0,1593265565,"~/tmp/vim-config/update.sh"
+-'  5  0  ~/tmp/vim-config/update.sh
+|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
+-'  5  0  ~/tmp/vim-config/update.sh
+|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
+-'  5  0  ~/tmp/vim-config/update.sh
+|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
+-'  5  0  ~/tmp/vim-config/update.sh
+|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
+-'  5  0  ~/tmp/vim-config/update.sh
+|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
+-'  5  0  ~/tmp/vim-config/update.sh
+|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
+-'  5  0  ~/tmp/vim-config/update.sh
+|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265554,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265554,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265554,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265554,"~/tmp/vim-config/update.sh"
+-'  1  13  ~/tmp/vim-config/update.sh
+|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
+-'  1  13  ~/tmp/vim-config/update.sh
+|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
+-'  1  13  ~/tmp/vim-config/update.sh
+|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
+-'  1  13  ~/tmp/vim-config/update.sh
+|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
+-'  1  13  ~/tmp/vim-config/update.sh
+|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
+-'  1  13  ~/tmp/vim-config/update.sh
+|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
+-'  1  13  ~/tmp/vim-config/update.sh
+|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
+-'  1  13  ~/tmp/vim-config/update.sh
+|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  5  12  ~/tmp/vim-config/update.sh
+|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  5  12  ~/tmp/vim-config/update.sh
+|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  5  12  ~/tmp/vim-config/update.sh
+|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  5  12  ~/tmp/vim-config/update.sh
+|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  5  12  ~/tmp/vim-config/update.sh
+|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  5  12  ~/tmp/vim-config/update.sh
+|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  5  12  ~/tmp/vim-config/update.sh
+|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  5  12  ~/tmp/vim-config/update.sh
+|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  4  12  ~/tmp/vim-config/update.sh
+|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/update.sh
+|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  ~/tmp/vim-config/setup.sh
+|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
 
 # History of marks within files (newest to oldest):
+
+> ~/tmp/vim-config/update.sh
+	*	1593265754	0
+	"	6	9
+	^	6	10
+	.	6	9
+	+	7	18
+	+	8	23
+	+	9	9
+	+	1	13
+	+	8	0
+	+	7	5
+	+	8	0
+	+	4	16
+	+	1	17
+	+	3	24
+	+	6	9
+
+> ~/tmp/vim-config/setup.sh
+	*	1593265610	0
+	"	3	1
+	.	1	0
+	+	1	0
+
+> ~/.vimrc
+	*	1593265160	0
+	"	1	0
+	^	343	134
+	.	1	0
+	+	236	0
+	+	206	0
+	+	199	1
+	+	199	0
+	+	224	0
+	+	199	0
+	+	221	0
+	+	227	0
+	+	224	0
+	+	223	0
+	+	224	1
+	+	3	0
+	+	4	0
+	+	3	0
+	+	223	0
+	+	224	0
+	+	315	30
+	+	4	0
+	+	1	0
+	+	4	0
+	+	3	0
+	+	33	23
+	+	32	18
+	+	2	0
+	+	36	0
+	+	34	28
+	+	31	0
+	+	30	0
+	+	29	0
+	+	30	0
+	+	31	0
+	+	25	0
+	+	23	0
+	+	20	0
+	+	17	0
+	+	315	0
+	+	227	0
+	+	228	0
+	+	231	0
+	+	232	0
+	+	231	0
+	+	234	0
+	+	235	0
+	+	233	0
+	+	261	24
+	+	262	24
+	+	263	20
+	+	267	0
+	+	263	0
+	+	264	26
+	+	265	27
+	+	266	27
+	+	267	0
+	+	260	0
+	+	139	25
+	+	221	0
+	+	261	21
+	+	139	24
+	+	125	0
+	+	1	0
+	+	270	0
+	+	274	0
+	+	35	34
+	+	35	13
+	+	36	0
+	+	336	50
+	+	335	0
+	+	336	60
+	+	341	8
+	+	338	11
+	+	340	32
+	+	146	0
+	+	47	0
+	+	198	4
+	+	199	0
+	+	229	0
+	+	295	0
+	+	294	0
+	+	295	0
+	+	241	8
+	+	294	17
+	+	294	0
+	+	300	4
+	+	294	0
+	+	297	0
+	+	299	0
+	+	298	0
+	+	297	0
+	+	298	0
+	+	297	1
+	+	298	1
+	+	261	16
+	+	262	17
+	+	263	0
+	+	343	89
+	+	343	33
+	+	343	161
+	+	343	0
+	+	343	133
+	+	1	0
+	n	94	33
+
+> ~/.zshrc
+	*	1593264693	0
+	"	85	18
+	^	85	25
+	.	85	0
+	+	130	25
+	+	130	22
+	+	130	0
+	+	121	0
+	+	116	0
+	+	121	0
+	+	130	0
+	+	121	0
+	+	116	60
+	+	116	0
+	+	120	0
+	+	115	0
+	+	120	0
+	+	119	7
+	+	118	0
+	+	130	0
+	+	119	19
+	+	131	0
+	+	11	12
+	+	116	239
+	+	116	183
+	+	116	59
+	+	116	179
+	+	116	0
+	+	116	25
+	+	116	1
+	+	116	24
+	+	116	0
+	+	116	143
+	+	116	0
+	+	116	82
+	+	116	173
+	+	116	30
+	+	116	156
+	+	117	27
+	+	116	35
+	+	116	147
+	+	116	0
+	+	122	0
+	+	127	0
+	+	124	13
+	+	124	203
+	+	85	18
+	+	86	0
+	+	85	26
+	+	85	0
+	+	132	0
+	+	85	0
+
+> ~/.bashrc
+	*	1593262057	0
+	"	120	0
+	^	120	10
+	.	120	9
+	+	120	9
+
+> ~/code/android-kernel/common/mm/mmap.c
+	*	1593262048	0
+	"	1	0
+	.	2999	0
+	+	2999	0
+
+> ~/code/android-kernel/common/README.md
+	*	1593261809	0
+	"	1	0
+
+> ~/code/android-kernel/common/fs/proc/meminfo.c
+	*	1593261565	0
+	"	1	0
+
+> ~/code/android-kernel/common/sound/i2c/i2c.c
+	*	1593261277	0
+	"	1	0
+
+> ~/code/android-kernel/common/kernel/sched/psi.c
+	*	1593261231	0
+	"	1	0
+	.	1	0
+	+	686	0
+	+	1	16
+	+	1344	12
+	+	30	16
+	+	1344	13
+	+	1344	0
+	+	30	0
+	+	1	0
+
+> 765  common/mm/mmap.c
+	*	1593261140	0
+	"	1	0
+
+> 765  common/mm/mmap.c
+	*	1593261128	0
+	"	1	0
+
+> ~/code/android-kernel/common/ControlP
+	*	1593261091	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/code/android/Android.bp
+	*	1593260639	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/code/android/bionic/libc/malloc_debug/Android.bp
+	*	1593259943	0
+	"	139	1
+
+> /usr/share/vim/vim80/doc/map.txt
+	*	1593259941	0
+	"	202	35
+
+> ~/tmp/123.txt
+	*	1593259123	0
+	"	1	0
+
+> ~/tmp/install.sh
+	*	1593259043	0
+	"	144	0
+	.	1	0
+	+	1	0
+
+> ~/tmp/1.txt
+	*	1593259006	0
+	"	1	0
+	^	1	10
+	.	1	9
+	+	1	0
+	+	1	9
+
+> ~/code/android/bionic/libc/malloc_debug/malloc_debug.cpp
+	*	1593255198	0
+	"	825	10
+
+> ~/code/android/bionic/libc/malloc_debug/Config.h
+	*	1593254893	0
+	"	53	27
+
+> ~/.oh-my-zsh/themes/my.zsh-theme
+	*	1593254826	0
+	"	32	61
+	^	32	62
+	.	32	61
+	+	1	37
+	+	1	0
+	+	1	1
+	+	1	60
+	+	1	0
+	+	1	1
+	+	1	31
+	+	1	0
+	+	1	9
+	+	1	16
+	+	1	0
+	+	1	37
+	+	35	0
+	+	33	42
+	+	16	27
+	+	16	36
+	+	16	47
+	+	33	18
+	+	16	6
+	+	16	49
+	+	16	35
+	+	16	45
+	+	16	38
+	+	16	0
+	+	33	29
+	+	16	6
+	+	16	11
+	+	16	0
+	+	16	6
+	+	16	1
+	+	33	116
+	+	33	0
+	+	33	146
+	+	33	0
+	+	16	0
+	+	33	121
+	+	16	0
+	+	11	0
+	+	33	132
+	+	31	18
+	+	32	43
+	+	33	73
+	+	32	39
+	+	13	0
+	+	12	18
+	+	32	61
+
+> ~/code/android-kernel/common/NERD_tree_1
+	*	1593253844	0
+	"	25	0
+	.	1	0
+	+	1	0
+
+> ~/.oh-my-zsh/themes/blinks.zsh-theme
+	*	1593252995	0
+	"	27	45
+
+> ~/.oh-my-zsh/oh-my-zsh.sh
+	*	1593252543	0
+	"	1	0
+
+> ~/.zsh
+	*	1593252140	0
+	"	1	0
+
+> ~/.oh-my-zsh/themes/suvash.zsh-theme
+	*	1593252028	0
+	"	1	0
+
+> ~/.oh-my-zsh/themes/tjkirch_mod.zsh-theme
+	*	1593252011	0
+	"	6	0
+
+> ~/.oh-my-zsh/themes/linuxonly.zsh-theme
+	*	1593251981	0
+	"	79	0
+
+> ~/code/android-kernel/common/drivers/dma-buf/dma-buf.c
+	*	1593251159	0
+	"	481	0
+	.	80	0
+	+	80	0
+
+> ~/code/android/system/memory/lmkd/lmkd.cpp
+	*	1593250682	0
+	"	416	5
+
+> ~/code/android/system/memory/lmkd/Android.bp
+	*	1593250561	0
+	"	52	0
+
+> ~/.oh-my-zsh/NERD_tree_1
+	*	1593249700	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/.oh-my-zsh/plugins/gitfast/gitfast.plugin.zsh
+	*	1593249613	0
+	"	3	22
+
+> ~/.oh-my-zsh/plugins/git/git.plugin.zsh
+	*	1593249529	0
+	"	225	0
+
+> ~/code/android/system/memory/libmeminfo/showmap_test.sh
+	*	1593247612	0
+	"	53	0
+
+> ~/.profile
+	*	1593243170	0
+	"	27	0
+	.	28	0
+	+	28	2
+	+	28	0
+	+	28	34
+	+	28	0
+
+> /etc/wsl.conf
+	*	1593242189	0
+	"	3	37
+	^	3	38
+	.	3	38
+	+	3	38
 
 > /System/Library/LaunchDaemons/com.apple.locate.plist
 	*	1515640072	0
 	"	30	0
-
-> ~/.vimrc
-	*	1515635233	0
-	"	152	4
-	^	402	31
-	.	402	30
-	+	3	0
-	+	4	0
-	+	3	0
-	+	4	0
-	+	10	25
-	+	7	0
-	+	9	0
-	+	7	0
-	+	10	3
-	+	9	0
-	+	310	0
-	+	312	0
-	+	319	0
-	+	319	109
-	+	332	0
-	+	319	0
-	+	332	0
-	+	46	4
-	+	64	72
-	+	65	0
-	+	64	0
-	+	48	0
-	+	400	0
-	+	394	0
-	+	400	31
-	+	400	0
-	+	1	151
-	+	3	0
-	+	1	1
-	+	272	32
-	+	272	69
-	+	272	85
-	+	272	124
-	+	272	32
-	+	272	0
-	+	223	0
-	+	216	1
-	+	216	0
-	+	254	0
-	+	216	0
-	+	250	0
-	+	257	0
-	+	263	0
-	+	254	0
-	+	253	0
-	+	254	1
-	+	3	0
-	+	4	0
-	+	3	0
-	+	253	0
-	+	254	0
-	+	402	30
 
 > ~/Temp/log
 	*	1515578062	0
@@ -1637,239 +2168,3 @@ $
 > ~/Desktop/msm8916-qrd-skuw.dts
 	*	1509510182	0
 	"	1	0
-
-> ~/Downloads/kernel/arch/arm/boot/dts/qcom/msm8916-qrd-skuw.dts
-	*	1509510175	0
-	"	1	0
-
-> ~/Temp/git/wrapper.c
-	*	1509496359	0
-	"	235	7
-
-> ~/Temp/git/ws.c
-	*	1509496303	0
-	"	5	1
-
-> ~/Downloads/git.diff
-	*	1509444085	0
-	"	27	21
-
-> ~/Temp/git/strbuf.c
-	*	1509438867	0
-	"	43	7
-
-> ~/Temp/git/cache.h
-	*	1509438813	0
-	"	593	4
-
-> ~/Temp/git/strbuf.h
-	*	1509437203	0
-	"	278	1
-
-> ~/Temp/1.c
-	*	1509437067	0
-	"	4	0
-	^	4	0
-	.	3	9
-	+	33	7
-	+	1	8
-	+	35	12
-	+	24	12
-	+	30	15
-	+	35	9
-	+	35	0
-	+	31	1
-	+	32	0
-	+	33	9
-	+	24	13
-	+	26	11
-	+	27	0
-	+	30	0
-	+	28	0
-	+	35	8
-	+	35	0
-	+	34	20
-	+	5	12
-	+	23	12
-	+	5	24
-	+	5	21
-	+	5	24
-	+	5	12
-	+	22	12
-	+	18	19
-	+	19	13
-	+	20	0
-	+	19	6
-	+	21	27
-	+	5	12
-	+	17	12
-	+	12	9
-	+	10	24
-	+	12	17
-	+	11	13
-	+	12	19
-	+	8	17
-	+	10	21
-	+	9	15
-	+	12	39
-	+	13	29
-	+	14	34
-	+	16	33
-	+	9	18
-	+	16	8
-	+	2	16
-	+	5	26
-	+	7	0
-	+	16	0
-	+	15	0
-	+	5	12
-	+	6	12
-	+	4	0
-	+	3	9
-
-> ~/Temp/git/config.c
-	*	1509431422	0
-	"	44	1
-
-> ~/Temp/git/compat/setenv.c
-	*	1509361245	0
-	"	32	9
-
-> ~/Temp/git/compat/mingw.h
-	*	1509361244	0
-	"	263	25
-
-> ~/Temp/git/compat/mingw.c
-	*	1509361243	0
-	"	1017	21
-
-> ~/Temp/git/quote.c
-	*	1509361055	0
-	"	44	0
-
-> ~/Temp/git/compat/vcbuild/include/unistd.h
-	*	1509359679	0
-	"	51	0
-
-> ~/Temp/git/__Tagbar__
-	*	1509355980	0
-	"	36	0
-	.	200	0
-	+	200	0
-
-> ~/Temp/git/ControlP
-	*	1509355967	0
-	"	1	0
-	.	2	0
-	+	2	0
-
-> ~/Temp/git/utf8.c
-	*	1508399785	0
-	"	652	0
-
-> ~/Temp/git/config.h
-	*	1508399500	0
-	"	25	0
-
-> ~/Temp/git/alias.c
-	*	1508399357	0
-	"	24	2
-
-> ~/Temp/git/environment.c
-	*	1508399233	0
-	"	184	0
-
-> ~/Temp/git/argv-array.c
-	*	1508399082	0
-	"	67	0
-
-> ~/Temp/git/parse-options.h
-	*	1508398865	0
-	"	127	0
-
-> ~/Temp/file.txt
-	*	1508337454	0
-	"	1	0
-
-> ~/Temp/afile.txt
-	*	1508336600	0
-	"	1	0
-
-> ~/Temp/build.prop
-	*	1508116165	0
-	"	66	29
-	^	66	30
-	.	66	29
-	+	66	29
-
-> ~/Temp/linux-2.6.11/arch/i386/kernel/head.S
-	*	1507587052	0
-	"	459	0
-
-> ~/Temp/linux-2.6.36/drivers/lguest/x86/core.c
-	*	1507586398	0
-	"	763	2
-
-> ~/Temp/linux-2.6.36/arch/arm/include/asm/segment.h
-	*	1507586125	0
-	"	11	0
-
-> /private/etc/man.conf
-	*	1506472430	0
-	"	41	32
-
-> ~/Temp/tmp/.git/COMMIT_EDITMSG
-	*	1506417765	0
-	"	1	0
-	.	1	0
-	+	3	0
-	+	2	0
-	+	1	0
-	+	2	0
-	+	1	3
-	+	1	64
-	+	1	0
-
-> ~/Temp/tmp/1.c
-	*	1506417726	0
-	"	2	17
-	^	2	18
-	.	2	17
-	+	2	17
-
-> ~/1.c
-	*	1506410672	0
-	"	2	12
-	^	3	0
-	.	6	13
-	+	6	13
-
-> /usr/local/bin/javac-algs4
-	*	1506394481	0
-	"	9	59
-	^	9	60
-	.	7	59
-	+	7	58
-	+	7	59
-
-> /usr/local/bin/java-algs4
-	*	1506394304	0
-	"	7	0
-	.	8	0
-	+	8	0
-
-> /usr/local/bin/checkstyle-algs4
-	*	1506393811	0
-	"	9	0
-
-> ~/Temp/ControlP
-	*	1505866458	0
-	"	1	0
-	.	1	0
-	+	1	0
-
-> /Volumes/rubbi5hthird_ntfs_disk/Code/qcom/MSM8916/lollipop/frameworks/base/policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
-	*	1505830494	0
-	"	3743	42
-	.	1723	0
-	+	1723	0
