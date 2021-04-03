@@ -89,7 +89,8 @@ set tags=./tags;/                                                               
 
 syntax on                                                                       "turn on syntax highlighting
 
-colorscheme solarized
+" colorscheme solarized
+colorscheme onehalfdark
 
 " ================ Turn Off Swap Files ==============
 
@@ -337,7 +338,7 @@ let g:linuxsty_patterns = [ "/usr/src/", "/linux", "/android-kernel"]
 
 " light line
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'onehalfdark',
       \ }
 
 let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --theme=Dracula --style=header,grid --line-range :300 {}'"

@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/Dr
+~MSle0~/oh
 
 # Last Substitute Search Pattern:
 ~MSle0&TERT
@@ -21,9 +21,15 @@ $
 
 # Command Line History (newest to oldest):
 :q
-|2,0,1593265755,,"q"
+|2,0,1617431812,,"q"
+:wqa
+|2,0,1617430955,,"wqa"
 :w
-|2,0,1593265754,,"w"
+|2,0,1616931339,,"w"
+:colorscheme onehalfdark
+|2,0,1616931307,,"colorscheme onehalfdark"
+:colorscheme onehalflight
+|2,0,1616931304,,"colorscheme onehalflight"
 :wq
 |2,0,1593265499,,"wq"
 :PlugInstall
@@ -50,8 +56,6 @@ $
 |2,0,1593259809,,"FzfFiles"
 :w\
 |2,0,1593257582,,"w\\"
-:wqa
-|2,0,1593254174,,"wqa"
 :PlugUpdate
 |2,0,1593254113,,"PlugUpdate"
 :PlugUp
@@ -211,7 +215,13 @@ $
 
 # Search String History (newest to oldest):
 ? \s\+$
-|2,1,1593265754,,"\\s\\+$"
+|2,1,1617430955,,"\\s\\+$"
+?/oh
+|2,1,1616931332,47,"oh"
+?/dircol
+|2,1,1616930704,47,"dircol"
+?/sol
+|2,1,1616929796,47,"sol"
 ?/Dr
 |2,1,1593264687,47,"Dr"
 ?/ansi
@@ -885,24 +895,132 @@ $
 
 # Registers:
 "0	LINE	0
-	echo 'copy the vim config'
-|3,0,0,1,1,0,1593265749,"echo 'copy the vim config'"
+	" colorscheme solarized
+|3,0,0,1,1,0,1616929799,"\" colorscheme solarized"
 "1	LINE	0
-	rm ./.vim
-|3,0,1,1,1,0,1593265394,"rm ./.vim"
-"2	LINE	0
-	let $FZF_DEFAULT_OPTS="--solarized --preview-window 'right:60%' --layout reverse --margin=1,4"
-|3,0,2,1,1,0,1593261772,"let $FZF_DEFAULT_OPTS=\"--solarized --preview-window 'right:60%' --layout reverse --margin=1,4\""
-"3	LINE	0
+	# Bliss theme for GNU dircolors
+	# @author https://github.com/JoshJon
+	#
+	# More Information about Bliss dircolors at:
+	# https://github.com/JoshJon/dircolors-bliss-macos
+	#
+	# For information on dircolors files refer to 'dir_colors - Linux Man Pages'
+	# https://www.systutorials.com/docs/linux/man/5-dir_colors/
 	
-|3,0,3,1,1,0,1593261581,""
+	# Term Section
+	TERM Eterm
+	TERM ansi
+	TERM color-xterm
+	TERM con132x25
+	TERM con132x30
+	TERM con132x43
+	TERM con132x60
+	TERM con80x25
+	TERM con80x28
+	TERM con80x30
+	TERM con80x43
+	TERM con80x50
+	TERM con80x60
+	TERM cons25
+	TERM console
+	TERM cygwin
+	TERM dtterm
+	TERM dvtm
+	TERM dvtm-256color
+	TERM eterm-color
+	TERM fbterm
+	TERM gnome
+	TERM gnome-256color
+	TERM jfbterm
+	TERM konsole
+	TERM konsole-256color
+	TERM kterm
+	TERM linux
+	TERM linux-c
+	TERM mach-color
+	TERM mlterm
+	TERM putty
+	TERM putty-256color
+	TERM rxvt
+	TERM rxvt-256color
+	TERM rxvt-cygwin
+	TERM rxvt-cygwin-native
+	TERM rxvt-unicode
+	TERM rxvt-unicode256
+	TERM rxvt-unicode-256color
+|3,0,1,1,50,0,1616931172,"# Bliss theme for GNU dircolors","# @author https://github.com/JoshJon","#","# More Information about Bliss dircolors at:","# https://github.com/JoshJon/dircolors-bliss-macos","#","# For information on dircolors files refer to 'dir_colors - Linux Man Pages'","# https://www.systutorials.com/docs/linux/man/5-dir_colors/","","# Term Section","TERM Eterm","TERM ansi","TERM color-xterm","TERM con132x25","TERM con132x30","TERM con132x43",>16
+|<"TERM con132x60","TERM con80x25","TERM con80x28","TERM con80x30","TERM con80x43","TERM con80x50","TERM con80x60","TERM cons25","TERM console","TERM cygwin","TERM dtterm","TERM dvtm","TERM dvtm-256color","TERM eterm-color","TERM fbterm","TERM gnome","TERM gnome-256color","TERM jfbterm","TERM konsole","TERM konsole-256color","TERM kterm","TERM linux","TERM linux-c","TERM mach-color","TERM mlterm","TERM putty","TERM putty-256color","TERM rxvt","TERM rxvt-256color","TERM rxvt-cygwin",>25
+|<"TERM rxvt-cygwin-native","TERM rxvt-unicode","TERM rxvt-unicode256","TERM rxvt-unicode-256color"
+"2	LINE	0
+	# Copyright (C) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+	# Copyright (C) 2017-present Sven Greb <development@svengreb.de>
+	
+	# Project:    Nord dircolors
+	# Version:    0.2.0
+	# Repository: https://github.com/arcticicestudio/nord-dircolors
+	# License:    MIT
+	
+	COLOR tty
+	
+	TERM alacritty
+	TERM alacritty-direct
+	TERM ansi
+	TERM *color*
+	TERM con[0-9]*x[0-9]*
+	TERM cons25
+	TERM console
+	TERM cygwin
+	TERM dtterm
+	TERM dvtm
+	TERM dvtm-256color
+	TERM Eterm
+	TERM eterm-color
+	TERM fbterm
+	TERM gnome
+	TERM gnome-256color
+	TERM hurd
+	TERM jfbterm
+	TERM konsole
+	TERM konsole-256color
+	TERM kterm
+	TERM linux
+	TERM linux-c
+	TERM mlterm
+	TERM putty
+	TERM putty-256color
+	TERM rxvt*
+	TERM rxvt-unicode
+	TERM rxvt-256color
+	TERM rxvt-unicode256
+	TERM screen*
+	TERM screen-256color
+	TERM st
+	TERM st-256color
+	TERM terminator
+	TERM tmux*
+	TERM tmux-256color
+	TERM vt100
+	TERM xterm*
+	TERM xterm-color
+|3,0,2,1,50,0,1616930790,"# Copyright (C) 2017-present Arctic Ice Studio <development@arcticicestudio.com>","# Copyright (C) 2017-present Sven Greb <development@svengreb.de>","","# Project:    Nord dircolors","# Version:    0.2.0","# Repository: https://github.com/arcticicestudio/nord-dircolors","# License:    MIT","","COLOR tty","","TERM alacritty","TERM alacritty-direct","TERM ansi","TERM *color*","TERM con[0-9]*x[0-9]*","TERM cons25","TERM console",>13
+|<"TERM cygwin","TERM dtterm","TERM dvtm","TERM dvtm-256color","TERM Eterm","TERM eterm-color","TERM fbterm","TERM gnome","TERM gnome-256color","TERM hurd","TERM jfbterm","TERM konsole","TERM konsole-256color","TERM kterm","TERM linux","TERM linux-c","TERM mlterm","TERM putty","TERM putty-256color","TERM rxvt*","TERM rxvt-unicode","TERM rxvt-256color","TERM rxvt-unicode256","TERM screen*","TERM screen-256color","TERM st","TERM st-256color","TERM terminator","TERM tmux*",>20
+|<"TERM tmux-256color","TERM vt100","TERM xterm*","TERM xterm-color"
+"3	LINE	0
+	rm ./.vim
+|3,0,3,1,1,0,1593265394,"rm ./.vim"
 "4	LINE	0
-	let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
-|3,0,4,1,1,0,1593261485,"let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }"
+	let $FZF_DEFAULT_OPTS="--solarized --preview-window 'right:60%' --layout reverse --margin=1,4"
+|3,0,4,1,1,0,1593261772,"let $FZF_DEFAULT_OPTS=\"--solarized --preview-window 'right:60%' --layout reverse --margin=1,4\""
 "5	LINE	0
-	--bind='f3:execute(bat {} > 123.txt),f4:execute(bat --style=numbers 1.txt | less),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-w:execute(echo {+})'
-|3,0,5,1,1,0,1593258442,"--bind='f3:execute(bat {} > 123.txt),f4:execute(bat --style=numbers 1.txt | less),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-w:execute(echo {+})'"
+	
+|3,0,5,1,1,0,1593261581,""
 "6	LINE	0
+	let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }
+|3,0,6,1,1,0,1593261485,"let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9 } }"
+"7	LINE	0
+	--bind='f3:execute(bat {} > 123.txt),f4:execute(bat --style=numbers 1.txt | less),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-w:execute(echo {+})'
+|3,0,7,1,1,0,1593258442,"--bind='f3:execute(bat {} > 123.txt),f4:execute(bat --style=numbers 1.txt | less),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-w:execute(echo {+})'"
+"8	LINE	0
 	export FZF_DEFAULT_OPTS="
 	--no-mouse --height 50% -1 --reverse --multi --inline-info
 	--preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {}) 2> /dev/null | head -300'
@@ -911,9 +1029,9 @@ $
 	--color dark,hl:33,hl+:37,fg+:235,bg+:136,fg+:254
 	--color info:254,prompt:37,spinner:108,pointer:235,marker:235
 	"
-|3,0,6,1,8,0,1593258161,"export FZF_DEFAULT_OPTS=\"","--no-mouse --height 50% -1 --reverse --multi --inline-info","--preview='[[ \\$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {}) 2> /dev/null | head -300'","--preview-window='right:hidden:wrap'",>191
+|3,0,8,1,8,0,1593258161,"export FZF_DEFAULT_OPTS=\"","--no-mouse --height 50% -1 --reverse --multi --inline-info","--preview='[[ \\$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {}) 2> /dev/null | head -300'","--preview-window='right:hidden:wrap'",>191
 |<"--bind='f3:enter:execute(less {}),f4:execute(bat --style=numbers 1.txt | less),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-w:execute(echo {+})'","--color dark,hl:33,hl+:37,fg+:235,bg+:136,fg+:254","--color info:254,prompt:37,spinner:108,pointer:235,marker:235","\""
-"7	LINE	0
+"9	LINE	0
 	#
 	# Respects the following environment variables:
 	#   ZSH     - path to the Oh My Zsh repository folder (default: $HOME/.oh-my-zsh)
@@ -964,245 +1082,441 @@ $
 			BLUE=$(printf '\033[34m')
 			BOLD=$(printf '\033[1m')
 			RESET=$(printf '\033[m')
-|3,0,7,1,50,0,1593257646,"#","# Respects the following environment variables:","#   ZSH     - path to the Oh My Zsh repository folder (default: $HOME/.oh-my-zsh)","#   REPO    - name of the GitHub repo to install from (default: ohmyzsh/ohmyzsh)","#   REMOTE  - full remote URL of the git repo to install (default: GitHub via HTTPS)","#   BRANCH  - branch to check out immediately after install (default: master)","#","# Other options:",>92
+|3,0,9,1,50,0,1593257646,"#","# Respects the following environment variables:","#   ZSH     - path to the Oh My Zsh repository folder (default: $HOME/.oh-my-zsh)","#   REPO    - name of the GitHub repo to install from (default: ohmyzsh/ohmyzsh)","#   REMOTE  - full remote URL of the git repo to install (default: GitHub via HTTPS)","#   BRANCH  - branch to check out immediately after install (default: master)","#","# Other options:",>92
 |<"#   CHSH       - 'no' means the installer will not change the default shell (default: yes)","#   RUNZSH     - 'no' means the installer will not run zsh after the install (default: yes)","#   KEEP_ZSHRC - 'yes' means the installer will not replace an existing .zshrc (default: no)","#","# You can also pass some arguments to the install script to set some these options:","#   --skip-chsh: has the same behavior as setting CHSH to 'no'","#   --unattended: sets both CHSH and RUNZSH to 'no'",>44
 |<"#   --keep-zshrc: sets KEEP_ZSHRC to 'yes'","# For example:","#   sh install.sh --unattended","#","set -e","","# Default settings","ZSH=${ZSH:-~/.oh-my-zsh}","REPO=${REPO:-ohmyzsh/ohmyzsh}","REMOTE=${REMOTE:-https://github.com/${REPO}.git}","BRANCH=${BRANCH:-master}","","# Other options","CHSH=${CHSH:-yes}","RUNZSH=${RUNZSH:-yes}","KEEP_ZSHRC=${KEEP_ZSHRC:-no}","","","command_exists() {","	command -v \"$@\" >/dev/null 2>&1","}","","error() {","	echo ${RED}\"Error: $@\"${RESET} >&2",>3
 |<"}","","setup_color() {","	# Only use colors if connected to a terminal","	if [ -t 1 ]; then","		RED=$(printf '\\033[31m')","		GREEN=$(printf '\\033[32m')","		YELLOW=$(printf '\\033[33m')","		BLUE=$(printf '\\033[34m')","		BOLD=$(printf '\\033[1m')","		RESET=$(printf '\\033[m')"
-"8	LINE	0
-	#
-|3,0,8,1,1,0,1593257643,"#"
-"9	LINE	0
-	#   ZSH=~/.zsh sh install.sh
-|3,0,9,1,1,0,1593257643,"#   ZSH=~/.zsh sh install.sh"
 ""-	CHAR	0
-	copy 
-|3,1,36,0,1,0,1593265752,"copy "
+	robbyrussell
+|3,1,36,0,1,0,1616931335,"robbyrussell"
 
 # File marks:
-'0  6  9  ~/tmp/vim-config/update.sh
-|4,48,6,9,1593265755,"~/tmp/vim-config/update.sh"
-'1  7  5  ~/tmp/vim-config/update.sh
-|4,49,7,5,1593265618,"~/tmp/vim-config/update.sh"
-'2  4  5  ~/tmp/vim-config/update.sh
-|4,50,4,5,1593265618,"~/tmp/vim-config/update.sh"
-'3  3  1  ~/tmp/vim-config/setup.sh
-|4,51,3,1,1593265611,"~/tmp/vim-config/setup.sh"
-'4  4  0  ~/tmp/vim-config/update.sh
-|4,52,4,0,1593265608,"~/tmp/vim-config/update.sh"
-'5  4  0  ~/tmp/vim-config/update.sh
-|4,53,4,0,1593265608,"~/tmp/vim-config/update.sh"
-'6  2  0  ~/tmp/vim-config/update.sh
-|4,54,2,0,1593265608,"~/tmp/vim-config/update.sh"
-'7  2  0  ~/tmp/vim-config/update.sh
-|4,55,2,0,1593265608,"~/tmp/vim-config/update.sh"
-'8  1  0  ~/tmp/vim-config/setup.sh
-|4,56,1,0,1593265600,"~/tmp/vim-config/setup.sh"
-'9  1  0  ~/tmp/vim-config/setup.sh
-|4,57,1,0,1593265600,"~/tmp/vim-config/setup.sh"
+'0  1  0  /mnt/f/vim-config/update.sh
+|4,48,1,0,1617431812,"/mnt/f/vim-config/update.sh"
+'1  1  0  /mnt/f/vim-config/setup.sh
+|4,49,1,0,1617431805,"/mnt/f/vim-config/setup.sh"
+'2  125  82  ~/.zshrc
+|4,50,125,82,1617430955,"~/.zshrc"
+'3  124  0  ~/.zshrc
+|4,51,124,0,1616932138,"~/.zshrc"
+'4  124  0  ~/.zshrc
+|4,52,124,0,1616932138,"~/.zshrc"
+'5  11  17  ~/.zshrc
+|4,53,11,17,1616931339,"~/.zshrc"
+'6  11  17  ~/.zshrc
+|4,54,11,17,1616931339,"~/.zshrc"
+'7  11  17  ~/.zshrc
+|4,55,11,17,1616931339,"~/.zshrc"
+'8  11  17  ~/.zshrc
+|4,56,11,17,1616931339,"~/.zshrc"
+'9  1  0  ~/.zhsr
+|4,57,1,0,1616931325,"~/.zhsr"
 
 # Jumplist (newest first):
--'  6  9  ~/tmp/vim-config/update.sh
-|4,39,6,9,1593265755,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265718,"~/tmp/vim-config/update.sh"
--'  7  5  ~/tmp/vim-config/update.sh
-|4,39,7,5,1593265618,"~/tmp/vim-config/update.sh"
--'  4  5  ~/tmp/vim-config/update.sh
-|4,39,4,5,1593265618,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265613,"~/tmp/vim-config/update.sh"
--'  3  1  ~/tmp/vim-config/setup.sh
-|4,39,3,1,1593265611,"~/tmp/vim-config/setup.sh"
--'  3  1  ~/tmp/vim-config/setup.sh
-|4,39,3,1,1593265611,"~/tmp/vim-config/setup.sh"
--'  3  1  ~/tmp/vim-config/setup.sh
-|4,39,3,1,1593265611,"~/tmp/vim-config/setup.sh"
--'  3  1  ~/tmp/vim-config/setup.sh
-|4,39,3,1,1593265611,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265609,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265609,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265609,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265609,"~/tmp/vim-config/setup.sh"
--'  4  0  ~/tmp/vim-config/update.sh
-|4,39,4,0,1593265608,"~/tmp/vim-config/update.sh"
--'  2  0  ~/tmp/vim-config/update.sh
-|4,39,2,0,1593265608,"~/tmp/vim-config/update.sh"
--'  2  0  ~/tmp/vim-config/update.sh
-|4,39,2,0,1593265608,"~/tmp/vim-config/update.sh"
--'  2  0  ~/tmp/vim-config/update.sh
-|4,39,2,0,1593265608,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265601,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265601,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265600,"~/tmp/vim-config/setup.sh"
--'  8  0  ~/tmp/vim-config/update.sh
-|4,39,8,0,1593265565,"~/tmp/vim-config/update.sh"
--'  5  0  ~/tmp/vim-config/update.sh
-|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
--'  5  0  ~/tmp/vim-config/update.sh
-|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
--'  5  0  ~/tmp/vim-config/update.sh
-|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
--'  5  0  ~/tmp/vim-config/update.sh
-|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
--'  5  0  ~/tmp/vim-config/update.sh
-|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
--'  5  0  ~/tmp/vim-config/update.sh
-|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
--'  5  0  ~/tmp/vim-config/update.sh
-|4,39,5,0,1593265565,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265554,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265554,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265554,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265554,"~/tmp/vim-config/update.sh"
--'  1  13  ~/tmp/vim-config/update.sh
-|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
--'  1  13  ~/tmp/vim-config/update.sh
-|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
--'  1  13  ~/tmp/vim-config/update.sh
-|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
--'  1  13  ~/tmp/vim-config/update.sh
-|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
--'  1  13  ~/tmp/vim-config/update.sh
-|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
--'  1  13  ~/tmp/vim-config/update.sh
-|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
--'  1  13  ~/tmp/vim-config/update.sh
-|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
--'  1  13  ~/tmp/vim-config/update.sh
-|4,39,1,13,1593265499,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  5  12  ~/tmp/vim-config/update.sh
-|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  5  12  ~/tmp/vim-config/update.sh
-|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  5  12  ~/tmp/vim-config/update.sh
-|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  5  12  ~/tmp/vim-config/update.sh
-|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  5  12  ~/tmp/vim-config/update.sh
-|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  5  12  ~/tmp/vim-config/update.sh
-|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  5  12  ~/tmp/vim-config/update.sh
-|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  5  12  ~/tmp/vim-config/update.sh
-|4,39,5,12,1593265488,"~/tmp/vim-config/update.sh"
--'  4  12  ~/tmp/vim-config/update.sh
-|4,39,4,12,1593265488,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/update.sh
-|4,39,1,0,1593265477,"~/tmp/vim-config/update.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
--'  1  0  ~/tmp/vim-config/setup.sh
-|4,39,1,0,1593265474,"~/tmp/vim-config/setup.sh"
+-'  1  0  /mnt/f/vim-config/update.sh
+|4,39,1,0,1617431812,"/mnt/f/vim-config/update.sh"
+-'  1  0  /mnt/f/vim-config/setup.sh
+|4,39,1,0,1617431805,"/mnt/f/vim-config/setup.sh"
+-'  1  0  /mnt/f/vim-config/setup.sh
+|4,39,1,0,1617431805,"/mnt/f/vim-config/setup.sh"
+-'  125  82  ~/.zshrc
+|4,39,125,82,1617430955,"~/.zshrc"
+-'  125  82  ~/.zshrc
+|4,39,125,82,1617430955,"~/.zshrc"
+-'  125  82  ~/.zshrc
+|4,39,125,82,1617430955,"~/.zshrc"
+-'  125  82  ~/.zshrc
+|4,39,125,82,1617430955,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1617430951,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1617430951,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1617430951,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1617430951,"~/.zshrc"
+-'  124  0  ~/.zshrc
+|4,39,124,0,1616932138,"~/.zshrc"
+-'  124  0  ~/.zshrc
+|4,39,124,0,1616932138,"~/.zshrc"
+-'  124  0  ~/.zshrc
+|4,39,124,0,1616932138,"~/.zshrc"
+-'  124  0  ~/.zshrc
+|4,39,124,0,1616932138,"~/.zshrc"
+-'  124  0  ~/.zshrc
+|4,39,124,0,1616932138,"~/.zshrc"
+-'  124  0  ~/.zshrc
+|4,39,124,0,1616932138,"~/.zshrc"
+-'  124  0  ~/.zshrc
+|4,39,124,0,1616932138,"~/.zshrc"
+-'  124  0  ~/.zshrc
+|4,39,124,0,1616932138,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1616932135,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1616932135,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1616932135,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1616932135,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  11  17  ~/.zshrc
+|4,39,11,17,1616931339,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1616931332,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1616931332,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1616931332,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1616931332,"~/.zshrc"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  1  0  ~/.zhsr
+|4,39,1,0,1616931325,"~/.zhsr"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
+-'  39  0  ~/.vimrc
+|4,39,39,0,1616931313,"~/.vimrc"
 
 # History of marks within files (newest to oldest):
+
+> /mnt/f/vim-config/update.sh
+	*	1617431810	0
+	"	1	0
+
+> /mnt/f/vim-config/setup.sh
+	*	1617431803	0
+	"	1	0
+
+> ~/.zshrc
+	*	1617430954	0
+	"	125	82
+	^	125	83
+	.	125	82
+	+	143	25
+	+	143	22
+	+	143	0
+	+	134	0
+	+	129	0
+	+	134	0
+	+	143	0
+	+	134	0
+	+	129	60
+	+	129	0
+	+	133	0
+	+	128	0
+	+	133	0
+	+	132	7
+	+	131	0
+	+	143	0
+	+	132	19
+	+	144	0
+	+	11	12
+	+	129	239
+	+	129	183
+	+	129	59
+	+	129	179
+	+	129	0
+	+	129	25
+	+	129	1
+	+	129	24
+	+	129	0
+	+	129	143
+	+	129	0
+	+	129	82
+	+	129	173
+	+	129	30
+	+	129	156
+	+	130	27
+	+	129	35
+	+	129	147
+	+	129	0
+	+	135	0
+	+	140	0
+	+	137	13
+	+	137	203
+	+	85	18
+	+	86	0
+	+	85	26
+	+	85	0
+	+	145	0
+	+	85	0
+	+	116	57
+	+	113	1
+	+	124	52
+	+	124	0
+	+	11	17
+	+	125	82
+
+> ~/.zhsr
+	*	1616931324	0
+	"	1	0
+
+> ~/.vimrc
+	*	1616931312	0
+	"	39	0
+	^	341	35
+	.	341	34
+	+	200	0
+	+	225	0
+	+	200	0
+	+	222	0
+	+	228	0
+	+	225	0
+	+	224	0
+	+	225	1
+	+	3	0
+	+	4	0
+	+	3	0
+	+	224	0
+	+	225	0
+	+	316	30
+	+	4	0
+	+	1	0
+	+	4	0
+	+	3	0
+	+	33	23
+	+	32	18
+	+	2	0
+	+	36	0
+	+	34	28
+	+	31	0
+	+	30	0
+	+	29	0
+	+	30	0
+	+	31	0
+	+	25	0
+	+	23	0
+	+	20	0
+	+	17	0
+	+	316	0
+	+	228	0
+	+	229	0
+	+	232	0
+	+	233	0
+	+	232	0
+	+	235	0
+	+	236	0
+	+	234	0
+	+	262	24
+	+	263	24
+	+	264	20
+	+	268	0
+	+	264	0
+	+	265	26
+	+	266	27
+	+	267	27
+	+	268	0
+	+	261	0
+	+	140	25
+	+	222	0
+	+	262	21
+	+	140	24
+	+	126	0
+	+	1	0
+	+	271	0
+	+	275	0
+	+	35	34
+	+	35	13
+	+	36	0
+	+	337	50
+	+	336	0
+	+	337	60
+	+	342	8
+	+	339	11
+	+	341	32
+	+	147	0
+	+	47	0
+	+	199	4
+	+	200	0
+	+	230	0
+	+	296	0
+	+	295	0
+	+	296	0
+	+	242	8
+	+	295	17
+	+	295	0
+	+	301	4
+	+	295	0
+	+	298	0
+	+	300	0
+	+	299	0
+	+	298	0
+	+	299	0
+	+	298	1
+	+	299	1
+	+	262	16
+	+	263	17
+	+	264	0
+	+	344	89
+	+	344	33
+	+	344	161
+	+	344	0
+	+	344	133
+	+	1	0
+	+	92	0
+	+	93	22
+	+	341	34
+	n	95	33
+
+> ~/.oh-my-zsh/themes/my_self.theme
+	*	1616931282	0
+	"	1	0
+	^	35	38
+	.	35	0
+	+	35	0
+
+> ~/.dircolors
+	*	1616931181	0
+	"	256	6
+	^	256	7
+	.	256	6
+	+	1	80
+	+	1	31
+	+	1	20
+	+	1	19
+	+	1	80
+	+	256	6
+
+> /mnt/f/vim-config/onehalf/README.md
+	*	1616930753	0
+	"	98	0
 
 > ~/tmp/vim-config/update.sh
 	*	1593265754	0
@@ -1226,167 +1540,6 @@ $
 	"	3	1
 	.	1	0
 	+	1	0
-
-> ~/.vimrc
-	*	1593265160	0
-	"	1	0
-	^	343	134
-	.	1	0
-	+	236	0
-	+	206	0
-	+	199	1
-	+	199	0
-	+	224	0
-	+	199	0
-	+	221	0
-	+	227	0
-	+	224	0
-	+	223	0
-	+	224	1
-	+	3	0
-	+	4	0
-	+	3	0
-	+	223	0
-	+	224	0
-	+	315	30
-	+	4	0
-	+	1	0
-	+	4	0
-	+	3	0
-	+	33	23
-	+	32	18
-	+	2	0
-	+	36	0
-	+	34	28
-	+	31	0
-	+	30	0
-	+	29	0
-	+	30	0
-	+	31	0
-	+	25	0
-	+	23	0
-	+	20	0
-	+	17	0
-	+	315	0
-	+	227	0
-	+	228	0
-	+	231	0
-	+	232	0
-	+	231	0
-	+	234	0
-	+	235	0
-	+	233	0
-	+	261	24
-	+	262	24
-	+	263	20
-	+	267	0
-	+	263	0
-	+	264	26
-	+	265	27
-	+	266	27
-	+	267	0
-	+	260	0
-	+	139	25
-	+	221	0
-	+	261	21
-	+	139	24
-	+	125	0
-	+	1	0
-	+	270	0
-	+	274	0
-	+	35	34
-	+	35	13
-	+	36	0
-	+	336	50
-	+	335	0
-	+	336	60
-	+	341	8
-	+	338	11
-	+	340	32
-	+	146	0
-	+	47	0
-	+	198	4
-	+	199	0
-	+	229	0
-	+	295	0
-	+	294	0
-	+	295	0
-	+	241	8
-	+	294	17
-	+	294	0
-	+	300	4
-	+	294	0
-	+	297	0
-	+	299	0
-	+	298	0
-	+	297	0
-	+	298	0
-	+	297	1
-	+	298	1
-	+	261	16
-	+	262	17
-	+	263	0
-	+	343	89
-	+	343	33
-	+	343	161
-	+	343	0
-	+	343	133
-	+	1	0
-	n	94	33
-
-> ~/.zshrc
-	*	1593264693	0
-	"	85	18
-	^	85	25
-	.	85	0
-	+	130	25
-	+	130	22
-	+	130	0
-	+	121	0
-	+	116	0
-	+	121	0
-	+	130	0
-	+	121	0
-	+	116	60
-	+	116	0
-	+	120	0
-	+	115	0
-	+	120	0
-	+	119	7
-	+	118	0
-	+	130	0
-	+	119	19
-	+	131	0
-	+	11	12
-	+	116	239
-	+	116	183
-	+	116	59
-	+	116	179
-	+	116	0
-	+	116	25
-	+	116	1
-	+	116	24
-	+	116	0
-	+	116	143
-	+	116	0
-	+	116	82
-	+	116	173
-	+	116	30
-	+	116	156
-	+	117	27
-	+	116	35
-	+	116	147
-	+	116	0
-	+	122	0
-	+	127	0
-	+	124	13
-	+	124	203
-	+	85	18
-	+	86	0
-	+	85	26
-	+	85	0
-	+	132	0
-	+	85	0
 
 > ~/.bashrc
 	*	1593262057	0
@@ -2139,32 +2292,3 @@ $
 > /Volumes/rubbi5hthird_ntfs_disk/Code/aosp-2.3.x/system/core/init/init.c
 	*	1510147994	0
 	"	86	34
-
-> /Volumes/rubbi5hthird_ntfs_disk/Code/aosp-2.3.x/system/core/init/Android.mk
-	*	1510146794	0
-	"	36	28
-
-> ~/Stuff/android-sdk-macosx/platforms/android-25/swichsdk.sh
-	*	1510037490	0
-	"	9	24
-	^	9	25
-	.	9	25
-	+	16	5
-	+	2	0
-	+	9	25
-
-> ~/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml
-	*	1509521722	0
-	"	4	0
-
-> ~/Desktop/msm8916-qrd-skuw.dtsi
-	*	1509510387	0
-	"	223	2
-
-> ~/Downloads/kernel/arch/arm/boot/dts/qcom/msm8916-qrd-skuw.dtsi
-	*	1509510233	0
-	"	394	0
-
-> ~/Desktop/msm8916-qrd-skuw.dts
-	*	1509510182	0
-	"	1	0
