@@ -10,11 +10,9 @@ set encoding=utf-8
 
 Plug 'ryanoasis/vim-webdevicons'
 Plug 'bogado/file-line'
-Plug 'junegunn/vim-easy-align'
 Plug 'ryanoasis/vim-webdevicons'
 Plug 'tpope/vim-commentary'
 Plug 'nelstrom/vim-visual-star-search'
-" Plug 'mileszs/ack.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
@@ -26,13 +24,16 @@ Plug 'duff/vim-bufonly'
 Plug 'tmhedberg/matchit'
 Plug 'gregsexton/MatchTag'
 Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 Plug 'elzr/vim-json'
 Plug 'ryanoasis/vim-devicons'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'vivien/vim-linux-coding-style'
+Plug 'mhinz/vim-grepper'
+Plug 'inkarkat/vim-mark'
+Plug 'inkarkat/vim-ingo-library'
 
 call plug#end()
 
@@ -55,6 +56,7 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 
 " ================ General Config ====================
 
+set termguicolors
 set t_Co=256                                                                    "Set 256 colors
 set title                                                                       "change the terminal's title
 set number                                                                      "Line numbers are good
@@ -231,11 +233,11 @@ vnoremap y y`]+
 vnoremap p p`]
 
 " Move selected lines up and down
-vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
 
 " Clear search highlight
-nnoremap <Leader><space> :noh<CR>
+nnoremap <Leader><space> :noh<CR>:MarkClear<CR>
 
 " Handle syntastic error window
 nnoremap <Leader>es :Errors<CR>
@@ -260,7 +262,7 @@ nnoremap <Leader>dc :cd %:p:h<CR>:pwd<CR>
 " nnoremap <Leader>T :TagbarToggle<CR>
 " nnoremap <Leader>m :CtrlPMRU<CR>
 nnoremap <silent> <Leader>o :Files<CR>
-nnoremap <silent> <Leader>s :Lines<CR>
+" nnoremap <silent> <Leader>s :Lines<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>h :History<CR>
 nnoremap <silent> <Leader>: :History:<CR>
@@ -334,11 +336,52 @@ endif
 au FileType gitcommit set tw=72
 
 " plugin inuxsty.vim
-let g:linuxsty_patterns = [ "/usr/src/", "/linux", "/android-kernel"]
+let g:linuxsty_patterns = [ "/usr/src/", "/linux", "/android-kernel", "msm"]
 
 " light line
 let g:lightline = {
       \ 'colorscheme': 'onehalfdark',
       \ }
 
-let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --theme=Dracula --style=header,grid --line-range :300 {}'"
+" plugin mark
+nmap  <Leader>m <Plug>MarkSet
+xmap  <Leader>m <Plug>MarkSet
+
+" plugin grepper
+let g:grepper               = {}
+let g:grepper.tools         = ['ag', 'rg']
+
+nmap <silent> <Leader>s <Leader>m:Grepper -buffer -cword -nohighlight -nojump -noprompt<CR>
+vmap <Leader>s <plug>(GrepperOperator)
+
+" regex search
+nmap <silent> <Leader>r :Grepper -highlight -buffer -nojump -tool ag<CR>
+
+
+" plugin fzf
+let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
+let g:fzf_layout = { 'down': '30%' }
+
+function! RipgrepFzfLiteral(query, fullscreen)
+  let command_fmt = 'rg -F --column --line-number --color=always --smart-case  -- %s '.fnameescape(expand('%'))
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+function! RipgrepFzfLiteralGlobal(query, fullscreen)
+  let command_fmt = 'rg -F --column --line-number --color=always --smart-case  -- %s'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command, ]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RgLitSearch call RipgrepFzfLiteral(<q-args>, <bang>0)
+command! -nargs=* -bang RgGLitSearch call RipgrepFzfLiteralGlobal(<q-args>, <bang>0)
+
+nmap <Leader>g :RgGLitSearch <C-r><C-w><CR>
+vmap <Leader>g y:RgGLitSearch <C-r>"<CR>
+nmap <Leader>f :RgLitSearch <C-r><C-w><CR>
+vmap <Leader>f y:RgLitSearch <C-r>"<CR>
