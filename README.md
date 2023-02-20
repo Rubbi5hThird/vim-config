@@ -1,5 +1,11 @@
 # My Vimrc
 
+## 2023/02/21
+1. Fix undo file bug
+2. add file-line
+3. add keymap for git plugin
+
+1. replace vim with neovim
 ## 2023/02/20
 1. replace vim with neovim
 
