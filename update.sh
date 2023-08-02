@@ -1,2 +1,11 @@
-gtar cf profile.tar -C $HOME --exclude="*.so" --exclude=".local/share/nvim/backups/"  .config/nvim .config/my_cfg .local/share/nvim/site .oh-my-zsh .zshrc
-cp -v ~/.config/nvim/lua/plugins.lua ~/.config/nvim/lua/init.lua ~/.config/nvim/init.vim ./
+rm -rf bin lib man share nvim-config
+mkdir bin lib man share nvim-config
+
+cp ~/.local/share/icons/ ~/.local/share/locale ~/.local/share/nvim/ share/ -rf
+cp ~/.local/man/man1 man/ -rf
+cp ~/.local/lib/nvim/ lib/ -rf
+cp ~/.local/bin/nvim bin/ -rf
+cp ~/.config/nvim/colors ~/.config/nvim/init.vim ~/.config/nvim/lua nvim-config/ -rf
+
+tar zcvf nvim-linux64.tgz bin lib man share
+rm -rf bin/ lib/ man/ share/

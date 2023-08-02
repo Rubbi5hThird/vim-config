@@ -4,12 +4,13 @@ require('plugins')
 vim.g.mapleader			= ','
 
 -- turn off swapfile
-vim.g.noswapfile		= true
 vim.g.nobackup			= true
 vim.g.nowb				= true
 
 -- option here
+vim.opt.swapfile		= false
 vim.opt.termguicolors	= true
+vim.opt.colorcolumn		= '80'
 vim.opt.lazyredraw		= true
 vim.opt.number			= true
 vim.opt.title			= true
@@ -50,7 +51,7 @@ vim.opt.sidescroll		= 5
 vim.opt.timeoutlen		= 1000
 vim.opt.ttimeoutlen		= 200
 vim.opt.list			= true
-vim.opt.listchars:append "space:⋅"
+-- vim.opt.listchars:append "space:⋅"
 
 -- nvim function here
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {

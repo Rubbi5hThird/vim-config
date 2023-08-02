@@ -1,5 +1,13 @@
 # My Vimrc
 
+## 2023/08/02
+Features
+1. add fileline
+2. add gitsign shotcuts
+3. add colorcolumn
+4. disable swapfile
+5. add update.sh
+
 ## 2023/02/21
 1. Fix undo file bug
 2. add file-line
