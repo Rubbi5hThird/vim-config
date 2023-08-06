@@ -1,5 +1,20 @@
 # My Vimrc
 
+## 2023/08/06
+Features
+1. add noice.nvim
+2. add search-replace.nvim"
+
+disable lazyredraw cause of noice.nvim
+
+## 2023/08/02
+Features
+1. add fileline
+2. add gitsign shotcuts
+3. add colorcolumn
+4. disable swapfile
+5. add update.sh
+
 ## 2023/08/02
 Features
 1. add fileline

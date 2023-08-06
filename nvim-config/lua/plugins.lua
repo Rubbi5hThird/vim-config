@@ -61,7 +61,7 @@ return require('packer').startup(function(use)
 		run = ':TSUpdate',
 		config = function()
 			require'nvim-treesitter.configs'.setup {
-				ensure_installed = { "c", "lua", "vim", "cpp", "java", "bash", "python" },
+				ensure_installed = { "c", "lua", "vim", "cpp", "java", "bash", "python", "diff", "make" },
 				sync_install = true,
 				auto_install = true,
 				ignore_install = {},
@@ -93,6 +93,74 @@ return require('packer').startup(function(use)
 		"windwp/nvim-autopairs",
 		config = function()
 			require("nvim-autopairs").setup {}
+		end
+	}
+	use {
+		"folke/noice.nvim",
+		requires = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
+		},
+		config = function()
+			require("noice").setup({
+				lsp = {
+					-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+					override = {
+						["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+						["vim.lsp.util.stylize_markdown"] = true,
+						["cmp.entry.get_documentation"] = true,
+					},
+					progress = {
+						enabled = false,
+					},
+				},
+				views = {
+					cmdline_popup = {
+						position = {
+							row = 12,
+							col = "50%",
+						},
+					},
+					cmdline_popupmenu = {
+						relative = "editor",
+						position = {
+							row = 15,
+							col = "50%",
+						},
+						border = {
+							style = "rounded",
+							padding = { 0, 1 },
+						},
+						win_options = {
+							winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+						},
+					},
+				},
+				cmdline = {
+					enabled = true,
+					view = "cmdline_popup",
+					format = {
+						search_down = { kind = "search", pattern = "^/", icon = ">/", lang = "regex" },
+						search_up = { kind = "search", pattern = "^/", icon = ">\\", lang = "regex" },
+						cmdline = { pattern = "^:", icon = ">_", lang = "vim" },
+					},
+				},
+				-- you can enable a preset for easier configuration
+				presets = {
+					bottom_search = false, -- use a classic bottom cmdline for search
+					command_palette = true, -- position the cmdline and popupmenu together
+					long_message_to_split = true, -- long messages will be sent to a split
+					inc_rename = false, -- enables an input dialog for inc-rename.nvim
+					lsp_doc_border = false, -- add a border to hover docs and signature help
+				},
+				health = {
+					checker = false,
+				},
+			})
 		end
 	}
 	use {
@@ -162,4 +230,14 @@ return require('packer').startup(function(use)
 	use 'google/vim-codefmt'
 	-- fileline
 	use 'bogado/file-line'
+	use {
+		"roobert/search-replace.nvim",
+		config = function()
+			require("search-replace").setup({
+				-- optionally override defaults
+				default_replace_single_buffer_options = "",
+				default_replace_multi_buffer_options = "",
+			})
+		end,
+	}
 end)
