@@ -4,6 +4,10 @@ lua require('init')
 let g:fzf_layout = { 'down': '30%' }
 let g:fzf_preview_window = ['right:50%', 'f3']
 
+autocmd Filetype json
+  \ let g:indentLine_setConceal = 0 |
+  \ let g:vim_json_syntax_conceal = 0
+
 function! RipgrepFzfLiteralGlobal(query, fullscreen)
   let command_fmt = 'rg -F --column --line-number --color=always --smart-case  -- %s'
   let initial_command = printf(command_fmt, shellescape(a:query))
@@ -13,3 +17,11 @@ function! RipgrepFzfLiteralGlobal(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang RgGLitSearch call RipgrepFzfLiteralGlobal(<q-args>, <bang>0)
+hi MatchParen cterm=bold ctermbg=green ctermfg=blue
+
+function! SetTab(size)
+  execute "set tabstop=".a:size
+  execute "set shiftwidth=".a:size
+  execute "set softtabstop=".a:size
+endfunction
+

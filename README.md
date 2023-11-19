@@ -1,5 +1,14 @@
 # My Vimrc
 
+## 2023/
+1. change onehalfdark MatchParen
+2. change json concel
+3. support set tabsize by leader+n
+3. support call tagbar by leader+t
+4. remove noice vim
+5. add sentiment & tagbar
+
+
 ## 2023/08/06
 Features
 1. add noice.nvim

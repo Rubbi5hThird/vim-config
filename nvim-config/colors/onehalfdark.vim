@@ -25,6 +25,7 @@ let s:blue        = { "gui": "#61afef", "cterm": "75"  }
 let s:purple      = { "gui": "#c678dd", "cterm": "176" }
 let s:cyan        = { "gui": "#56b6c2", "cterm": "73"  }
 let s:white       = { "gui": "#dcdfe4", "cterm": "188" }
+let s:red_thp     = { "gui": "#b3565d", "cterm": "188" }
 
 let s:fg          = s:white
 let s:bg          = s:black
@@ -111,7 +112,7 @@ call s:h("Folded", s:fg, "", "")
 call s:h("FoldColumn", s:fg, "", "")
 call s:h("SignColumn", s:fg, "", "")
 
-call s:h("MatchParen", s:blue, "", "underline")
+call s:h("MatchParen", "", s:red_thp, "")
 call s:h("SpecialKey", s:fg, "", "")
 call s:h("Title", s:green, "", "")
 call s:h("WildMenu", s:fg, "", "")

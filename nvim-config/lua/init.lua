@@ -115,7 +115,9 @@ map("n", "Y", "y$", { noremap = true })
 
 -- open nvim tree
 map("n", "<leader>n", ":NvimTreeToggle<CR>")
-
+map("n", "<leader>t", ":TagbarToggle<CR>")
+map("n", "<leader>2", ":call SetTab(2)<CR>")
+map("n", "<leader>4", ":call SetTab(4)<CR>")
 -- toggle between last 2 buffers
 map("n", "<leader><tab>", "<c-^>", { noremap = true })
 
