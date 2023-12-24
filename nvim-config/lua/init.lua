@@ -50,7 +50,7 @@ vim.opt.sidescrolloff	= 15
 vim.opt.sidescroll		= 5
 vim.opt.timeoutlen		= 1000
 vim.opt.ttimeoutlen		= 200
-vim.opt.list			= true
+-- vim.opt.list			= true
 -- vim.opt.listchars:append "space:⋅"
 
 -- nvim function here
@@ -90,12 +90,7 @@ vim.api.nvim_set_keymap("n", "<leader>rbf", "<CMD>SearchReplaceMultiBufferCFile<
 vim.cmd("colorscheme onehalfdark")
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax on")
-vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent3 guifg=#98C379 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
+
 
 -- keymap here
 map("n", "<leader><space>", ":nohlsearch<CR>", { silent = true })

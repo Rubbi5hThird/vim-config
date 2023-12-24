@@ -61,13 +61,29 @@ return require('packer').startup(function(use)
 		run = ':TSUpdate',
 		config = function()
 			require'nvim-treesitter.configs'.setup {
-				ensure_installed = { "c", "lua", "vim", "cpp", "java", "bash", "python", "diff", "make" },
+				ensure_installed = { "c", "lua", "vim", "cpp", "java", "bash", "python", "diff", "make", "css" },
 				sync_install = true,
 				auto_install = true,
 				ignore_install = {},
 				highlight = {
 					enable = true,
 					additional_vim_regex_highlighting = false,
+				},
+				rainbow = {
+					enable = true,
+					hlgroups = {
+						'TSRainbowOrange',
+						'TSRainbowGreen',
+						'TSRainbowCyan',
+						'TSRainbowRed',
+						'TSRainbowYellow',
+						'TSRainbowBlue',
+					},
+					-- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
+					extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+					max_file_lines = nil, -- Do not enable for files with more than n lines, int
+					-- colors = {}, -- table of hex strings
+					-- termcolors = { 'red', 'black' } -- table of colour name strings
 				},
 			}
 		end
@@ -146,15 +162,36 @@ return require('packer').startup(function(use)
 	use {
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
-			require("indent_blankline").setup {
-				char_highlight_list = {
-					"IndentBlanklineIndent1",
-					"IndentBlanklineIndent2",
-					"IndentBlanklineIndent3",
-					"IndentBlanklineIndent4",
-					"IndentBlanklineIndent5",
-					"IndentBlanklineIndent6",
+			local highlight = {
+				"RainbowRed",
+				"RainbowYellow",
+				"RainbowBlue",
+				"RainbowOrange",
+				"RainbowGreen",
+				"RainbowViolet",
+				"RainbowCyan",
+			}
+
+			local hooks = require "ibl.hooks"
+			-- create the highlight groups in the highlight setup hook, so they are reset
+			-- every time the colorscheme changes
+			hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+				vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
+				vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
+				vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
+				vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
+				vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
+				vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
+				vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+			end)
+
+			require("ibl").setup {
+				indent = { highlight = highlight, char = "│" },
+				whitespace = {
+					highlight = highlight,
+					remove_blankline_trail = false,
 				},
+				scope = { enabled = false },
 			}
 		end
 	}
@@ -162,15 +199,6 @@ return require('packer').startup(function(use)
 	use 'google/vim-codefmt'
 	-- fileline
 	use 'bogado/file-line'
-	use {
-		"utilyre/sentiment.nvim",
-		tag = "*",
-		config = function()
-			require("sentiment").setup({
-				-- config
-			})
-		end,
-	}
 	use {
 		"roobert/search-replace.nvim",
 		config = function()
@@ -182,4 +210,20 @@ return require('packer').startup(function(use)
 		end,
 	}
 	use 'preservim/tagbar'
+	use {
+		'HiPhish/rainbow-delimiters.nvim',
+		config = function()
+			require('rainbow-delimiters.setup').setup({
+				highlight = {
+					'RainbowDelimiterYellow',
+					'RainbowDelimiterBlue',
+					'RainbowDelimiterOrange',
+					'RainbowDelimiterGreen',
+					'RainbowDelimiterViolet',
+					'RainbowDelimiterCyan',
+				},
+
+			})
+		end,
+	}
 end)
