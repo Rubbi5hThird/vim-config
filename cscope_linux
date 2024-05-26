@@ -1,21 +1,27 @@
 #!/bin/bash
 
-standard_kernel_output_file="cscope.files"
+output_file="cscope.files"
 
-find . -maxdepth 1 -type f > "$standard_kernel_output_file"
-find arch/arm64 -type f >> "$standard_kernel_output_file"
-find include -type f >> "$standard_kernel_output_file"
-find kernel -type f >> "$standard_kernel_output_file"
-find mm -type f >> "$standard_kernel_output_file"
-find fs -type f >> "$standard_kernel_output_file"
-find drivers -type f >> "$standard_kernel_output_file"
-find net -type f >> "$standard_kernel_output_file"
-find ipc -type f >> "$standard_kernel_output_file"
-find lib -type f >> "$standard_kernel_output_file"
-find security -type f >> "$standard_kernel_output_file"
-find crypto -type f >> "$standard_kernel_output_file"
-find sound -type f >> "$standard_kernel_output_file"
-find usr -type f >> "$standard_kernel_output_file"
-find block -type f >> "$standard_kernel_output_file"
+function find_dir
+{
+	find $1 -type f -name '*.c' -o -name '*.h' -o -name '*.pl' -o -name '*.sh' -o -name '*.s' -o -name '*.S' >> $output_file
+}
 
-echo "gen $standard_kernel_output_file"
+echo "" > $output_file
+
+find_dir arch/arm64
+find_dir include
+find_dir kernel
+find_dir mm
+find_dir fs
+find_dir drivers/dma-buf
+# find_dir net
+find_dir ipc
+find_dir lib
+find_dir security
+find_dir crypto
+# find_dir sound
+find_dir usr
+find_dir block
+
+echo "gen $output_file `wc -l $output_file`"
