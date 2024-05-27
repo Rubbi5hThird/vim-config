@@ -26,30 +26,31 @@ local function set_opts()
   vim.opt.wrap = true
   vim.opt.linebreak = true
   vim.opt.hidden = true
-  vim.opt.splitright    = true
-  vim.opt.hidden      = true
-  vim.opt.conceallevel  = 2
+  vim.opt.splitright = true
+  vim.opt.hidden = true
+  vim.opt.conceallevel = 2
   vim.opt.concealcursor = 'i'
   vim.opt.fileencoding  = 'utf-8'
-  vim.opt.encoding    = 'utf-8'
-  vim.opt.gcr       = 'a:blinkon500-blinkwait500-blinkoff500'
-  vim.opt.mouse     = 'h'
-  vim.opt.undofile    = true
-  vim.opt.smarttab    = true
-  vim.opt.shiftwidth    = 4
-  vim.opt.softtabstop   = 4
-  vim.opt.tabstop     = 4
-  vim.opt.smartindent   = true
-  vim.opt.autoindent    = true
-  vim.opt.foldenable    = false
-  vim.opt.backspace   = 'indent,eol,start'
-  vim.opt.wildmenu    = true
-  vim.opt.wildignore    = '*.o,*.obj,*~,*logs*,*DS_Store*,log/**,tmp/**,*.png,*.jpg,*.gif'
-  vim.opt.scrolloff   = 8
+  vim.opt.encoding = 'utf-8'
+  vim.opt.gcr  = 'a:blinkon500-blinkwait500-blinkoff500'
+  vim.opt.mouse = 'h'
+  vim.opt.undofile = true
+  vim.opt.smarttab = true
+  vim.opt.shiftwidth = 2
+  vim.opt.softtabstop = 2
+  vim.opt.tabstop = 2
+  vim.opt.expandtab = true
+  vim.opt.smartindent = true
+  vim.opt.autoindent = true
+  vim.opt.foldenable = false
+  vim.opt.backspace = 'indent,eol,start'
+  vim.opt.wildmenu = true
+  vim.opt.wildignore = '*.o,*.obj,*~,*logs*,*DS_Store*,log/**,tmp/**,*.png,*.jpg,*.gif'
+  vim.opt.scrolloff = 8
   vim.opt.sidescrolloff = 15
-  vim.opt.sidescroll    = 5
-  vim.opt.timeoutlen    = 1000
-  vim.opt.ttimeoutlen   = 200
+  vim.opt.sidescroll = 5
+  vim.opt.timeoutlen = 1000
+  vim.opt.ttimeoutlen = 200
 end
 
 local function set_colorscheme()
@@ -132,6 +133,7 @@ local function intall_plugins()
       lazypath,
     })
   end
+
   vim.opt.rtp:prepend(lazypath)
 
   local opts = {noremap = true, silent = true}
@@ -139,65 +141,43 @@ local function intall_plugins()
   local visual = 'v'
 
   require("lazy").setup({
-    -- better syntax highlighting
-    {
-      'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'
+    { 'lukas-reineke/indent-blankline.nvim'},
+    { 'HiPhish/rainbow-delimiters.nvim' },
+    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+    { 'numToStr/Comment.nvim', opts = {}, lazy = false, },
+    { 'lewis6991/gitsigns.nvim', opts = {} },
+    { 'windwp/nvim-autopairs', event = "InsertEnter", opts = {} },
+    { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
+    { "dhananjaylatkar/cscope_maps.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-tree/nvim-web-devicons", },
+  },
+  { 'google/vim-codefmt', enabled = working,
+  dependencies = { 'google/vim-maktaba',
+  {
+    'google/vim-glaive',
+    config = function()
+      vim.cmd('call glaive#Install()')
+    end
+  },
+},
     },
-
-    {
-      'numToStr/Comment.nvim', opts = {}, lazy = false,
-    },
-
-    {
-      'lewis6991/gitsigns.nvim', opts = {}
-    },
-
-    -- status line
-    {
-      'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
-
-    -- cscope
-    {
-      "dhananjaylatkar/cscope_maps.nvim",
-      dependencies = { "nvim-telescope/telescope.nvim", "nvim-tree/nvim-web-devicons", },
-    },
-
-    -- code formatting
-    {
-      'google/vim-codefmt', enabled = working,
-      dependencies = { 'google/vim-maktaba',
-        {
-          'google/vim-glaive',
-          config = function()
-            vim.cmd('call glaive#Install()')
-          end
-        },
+    { 'nvim-telescope/telescope.nvim', tag = '0.1.6',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope-ui-select.nvim',
+      {
+        'nvim-telescope/telescope-fzf-native.nvim', build = 'make'
       },
     },
-
-    -- telescope for fzf, cscope
-    {
-      'nvim-telescope/telescope.nvim', tag = '0.1.6',
-      dependencies = {
-        'nvim-lua/plenary.nvim',
-        'nvim-telescope/telescope-ui-select.nvim',
-        {
-          'nvim-telescope/telescope-fzf-native.nvim', build = 'make'
-        },
-      },
-      init = function()
-        vim.keymap.set(normal, '<leader>o', '<cmd>Telescope find_files<cr>', opts)
-        vim.keymap.set(normal, '<leader>G', '<cmd>Telescope live_grep<cr>', opts)
-        vim.keymap.set(normal, '<leader>g', '<cmd>Telescope grep_string<cr>', opts)
-        vim.keymap.set(normal, '<leader>z', '<cmd>Telescope spell_suggest<cr>', opts)
-        vim.keymap.set(normal, '<leader>b', '<cmd>Telescope buffers<cr>', opts)
-      end
-    },
-
-    'lukas-reineke/indent-blankline.nvim',
-    'HiPhish/rainbow-delimiters.nvim',
-  })
+    init = function()
+      vim.keymap.set(normal, '<leader>o', '<cmd>Telescope find_files<cr>', opts)
+      vim.keymap.set(normal, '<leader>G', '<cmd>Telescope live_grep<cr>', opts)
+      vim.keymap.set(normal, '<leader>g', '<cmd>Telescope grep_string<cr>', opts)
+      vim.keymap.set(normal, '<leader>z', '<cmd>Telescope spell_suggest<cr>', opts)
+      vim.keymap.set(normal, '<leader>b', '<cmd>Telescope buffers<cr>', opts)
+    end
+  },
+})
 end
 
 local function plugin_treesitter()
@@ -261,7 +241,7 @@ local function plugin_telescope()
         override_generic_sorter = true,  -- override the generic sorter
         override_file_sorter = true,     -- override the file sorter
         case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-                                         -- the default case_mode is "smart_case"
+        -- the default case_mode is "smart_case"
       }
     },
     defaults = {
@@ -275,28 +255,20 @@ local function plugin_telescope()
 end
 
 local function plugin_ibl()
-  local highlight = {
-    "RainbowRed",
-    "RainbowYellow",
-    "RainbowBlue",
-    "RainbowOrange",
-    "RainbowGreen",
-    "RainbowViolet",
-    "RainbowCyan",
-  }
+  local highlight = { "RainbowRed", "RainbowYellow", "RainbowBlue", "RainbowOrange", "RainbowGreen", "RainbowViolet", "RainbowCyan", }
 
   local hooks = require('ibl.hooks')
   -- create the highlight groups in the highlight setup hook, so they are reset
   -- every time the colorscheme changes
   hooks.register(hooks.type.HIGHLIGHT_SETUP,
-    function()
-      vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
-      vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
-      vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
-      vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
-      vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
-      vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
-      vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+  function()
+    vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
+    vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
+    vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
+    vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
+    vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
+    vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
+    vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
   end)
 
   vim.g.rainbow_delimiters = { highlight = highlight }
