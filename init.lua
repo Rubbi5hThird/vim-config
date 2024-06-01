@@ -141,7 +141,9 @@ local function intall_plugins()
   local visual = 'v'
 
   require("lazy").setup({
-    { 'lukas-reineke/indent-blankline.nvim'},
+    { 'lewis6991/fileline.nvim' },
+    { 'vivien/vim-linux-coding-style' },
+    { 'lukas-reineke/indent-blankline.nvim' },
     { 'HiPhish/rainbow-delimiters.nvim' },
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     { 'numToStr/Comment.nvim', opts = {}, lazy = false, },
@@ -149,33 +151,23 @@ local function intall_plugins()
     { 'windwp/nvim-autopairs', event = "InsertEnter", opts = {} },
     { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
     { "dhananjaylatkar/cscope_maps.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-tree/nvim-web-devicons", },
-  },
-  { 'google/vim-codefmt', enabled = working,
-  dependencies = { 'google/vim-maktaba',
-  {
-    'google/vim-glaive',
-    config = function()
-      vim.cmd('call glaive#Install()')
-    end
-  },
-},
+      dependencies = { "nvim-telescope/telescope.nvim", "nvim-tree/nvim-web-devicons", },
     },
-    { 'nvim-telescope/telescope.nvim', tag = '0.1.6',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope-ui-select.nvim',
-      {
-        'nvim-telescope/telescope-fzf-native.nvim', build = 'make'
+    { 'google/vim-codefmt', enabled = working,
+      dependencies = { 'google/vim-maktaba', { 'google/vim-glaive', config = function() vim.cmd('call glaive#Install()') end },
       },
     },
-    init = function()
-      vim.keymap.set(normal, '<leader>o', '<cmd>Telescope find_files<cr>', opts)
-      vim.keymap.set(normal, '<leader>G', '<cmd>Telescope live_grep<cr>', opts)
-      vim.keymap.set(normal, '<leader>g', '<cmd>Telescope grep_string<cr>', opts)
-      vim.keymap.set(normal, '<leader>z', '<cmd>Telescope spell_suggest<cr>', opts)
-      vim.keymap.set(normal, '<leader>b', '<cmd>Telescope buffers<cr>', opts)
-    end
+    { 'nvim-telescope/telescope.nvim', tag = '0.1.6',
+      dependencies = {
+        'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-ui-select.nvim', { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+      },
+      init = function()
+        vim.keymap.set(normal, '<leader>o', '<cmd>Telescope find_files<cr>', opts)
+        vim.keymap.set(normal, '<leader>G', '<cmd>Telescope live_grep<cr>', opts)
+        vim.keymap.set(normal, '<leader>g', '<cmd>Telescope grep_string<cr>', opts)
+        vim.keymap.set(normal, '<leader>z', '<cmd>Telescope spell_suggest<cr>', opts)
+        vim.keymap.set(normal, '<leader>b', '<cmd>Telescope buffers<cr>', opts)
+      end
   },
 })
 end
@@ -297,6 +289,56 @@ local function plugin_cscope()
   }
 end
 
+local function plugin_gitsigns()
+  local gitsigns = require('gitsigns')
+  gitsigns.setup{
+    on_attach = function(bufnr)
+
+      local function map(mode, l, r, opts)
+        opts = opts or {}
+        opts.buffer = bufnr
+        vim.keymap.set(mode, l, r, opts)
+      end
+
+      -- Navigation
+      map('n', ']c', function()
+        if vim.wo.diff then
+          vim.cmd.normal({']c', bang = true})
+        else
+          gitsigns.nav_hunk('next')
+        end
+      end)
+
+      map('n', '[c', function()
+        if vim.wo.diff then
+          vim.cmd.normal({'[c', bang = true})
+        else
+          gitsigns.nav_hunk('prev')
+        end
+      end)
+
+      -- Actions
+      map('n', '<leader>hs', gitsigns.stage_hunk)
+      map('n', '<leader>hr', gitsigns.reset_hunk)
+      map('v', '<leader>hs', function() gitsigns.stage_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
+      map('v', '<leader>hr', function() gitsigns.reset_hunk {vim.fn.line('.'), vim.fn.line('v')} end)
+      map('n', '<leader>hS', gitsigns.stage_buffer)
+      map('n', '<leader>hu', gitsigns.undo_stage_hunk)
+      map('n', '<leader>hR', gitsigns.reset_buffer)
+      map('n', '<leader>hp', gitsigns.preview_hunk)
+      map('n', '<leader>hb', function() gitsigns.blame_line{full=true} end)
+      map('n', '<leader>tb', gitsigns.toggle_current_line_blame)
+      map('n', '<leader>hd', gitsigns.diffthis)
+      map('n', '<leader>hD', function() gitsigns.diffthis('~') end)
+      map('n', '<leader>td', gitsigns.toggle_deleted)
+
+      -- Text object
+      map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+    end
+  }
+
+end
+
 local function main()
   set_opts()
   set_colorscheme()
@@ -309,6 +351,7 @@ local function main()
   plugin_telescope()
   plugin_ibl()
   plugin_cscope()
+  plugin_gitsigns()
 end
 
 main()
